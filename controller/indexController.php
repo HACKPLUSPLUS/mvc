@@ -121,9 +121,43 @@ Class indexController Extends baseController
 		$bookAdapter = new BookAdapter( $book );
 		
 		var_dump( 'Author and Title: ' . $bookAdapter->getAuthorAndTitle() );
-
-		echo $page->showPage();
 		
+		/*** COMPOSITE DESIGN PATTERN ***/
+		$firstBook = new OneBook( 'Core PHP Programming, Third Edition', 'Atkinson and Suraki' );
+		echo( '(After creating first book) oneBook info: ');
+		echo( $firstBook->getBookInfo( 1 ) );
+
+		$secondBook = new OneBook( 'PHP Bible', 'Converse and Park' );
+		echo ( '(after creating second book) oneBook info: ');
+		echo $secondBook->getBookInfo( 1 );
+		
+		$thirdBook = new OneBook( 'Design Patterns', 'Gamma, Helm, Johson, and Vlissides' );
+		echo ( '(after creating third book) oneBook info: ');
+		echo $secondBook->getBookInfo( 1 );
+		
+		$books = new SeveralBooks();
+		
+		$booksCount = $books->addBook( $firstBook );
+		echo '(after adding firstBook to books) SeveralBooks info : ';
+		echo $books->getBookInfo( $booksCount );
+		
+		$booksCount = $books->addBook( $secondBook );
+		echo '(after adding secondBook to books) SeveralBooks info : ';
+		echo $books->getBookInfo( $booksCount );
+		
+		$booksCount = $books->addBook( $thirdBook );
+		echo '(after adding thirdBook to books) SeveralBooks info : ';
+		echo $books->getBookInfo( $booksCount );
+		
+		$booksCount = $books->removeBook( $firstBook );
+		echo '(after removing firstBook from books) SeveralBooks count : ';
+		echo $books->getBookCount();
+		
+		echo '(after removing firstBook from books) SeveralBooks info 1 : ';
+		echo $books->getBookInfo(1);
+		
+		echo $page->showPage();
+				
 		/*** set a template variable ***/
         $this->registry->template->welcome = 'Welcome to PHPRO MVC';
 		/*** load the index template ***/
