@@ -1,0 +1,28 @@
+Developpeur confirmé CMS / PHP (H/F)
+Description du poste
+Né de la fusion progressive de sociétés de services (Nextec Systems, Elypsia, Rightplace, La Souris Verte, ...), Scala regroupe à Marseille, Paris, Tunis, Nice et Tarascon, 140 personnes pour un chiffre d\'affaires consolidé de 11 M€ en 2013, en progression constante depuis 14 ans.
+Entreprise de services numériques, nous accompagnons nos clients dans la transformation de leur organisation.
+Conscient que notre force réside dans le talent et l’implication de nos collaborateurs, notre vocation est d’offrir un cadre de travail à la fois convivial et stimulant, propice au développement personnel et professionnel.
+ 
+Poste et missions :
+Dans le cadre du développement de notre activité Web, nous recrutons un Développeur confirmé CMS / PHP  (H/F).
+ 
+Missions :
+- Prendre en charge la conception technique de nos projets (analyse, conception, rédaction), et assurer l’accompagnement des développeurs.
+- Optimisation des processus de production (revue de code, intégration continue, Capitalisation de nos développements...)
+- Participer aux avant-vente : analyse, choix techniques, recommandations, chiffrage des projets.
+- Veille technologique
+ 
+Profil :
+Nous recherchons un profil ayant de bases solides en développement sur CMS, ayant évolué progressivement vers la conception technique, justifiant de 3 ans d’expérience en projet Web.
+Vous parlez couramment au minimum Php, Html5 et CSS3, Javascript, et avez une solide culture de l\'infrastructure LAMP.
+Vous maitrisez parfaitement plusieurs des outils suivants : Drupal, Symfony, Typo3, Prestashop, Magento, WordPress, Webistrano, Jenkins, Bootstrap, Axure,...
+ 
+Lieu : Poste à pourvoir sur Tarascon ou Marseille 16e
+Salaire : selon profil
+Démarrage : Dès que possible (Octobre 2014)
+ 
+Les avantages :
+- Contrat CDI
+- Mutuelle prise en charge à 75% par le groupe
+- Tickets Restaurants
