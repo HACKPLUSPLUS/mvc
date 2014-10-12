@@ -4,6 +4,27 @@ Class blogController Extends baseController {
 
 public function index() 
 {
+        
+        $filepath = dirname(__DIR__) . '/jobfiles/first.txt';
+        
+        $file = fopen( $filepath, 'r' );
+        
+        $text = fread( $file, filesize( $filepath ) );
+        
+        $profiler = new Profiler( $text );
+        
+        $bullshit = array (
+        		'php',
+        		'lamp',
+        		'drupal',
+        		'typo3',
+        		'magento',
+        		'bootstrap',
+        		'jenkins',
+        		'javascript');
+
+        var_dump( $profiler->bullshitMeter( $bullshit ) );
+		
         $this->registry->template->blog_heading = 'This is the blog Index';
         $this->registry->template->show('blog_index');
 }
