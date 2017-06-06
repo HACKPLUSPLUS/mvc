@@ -1,0 +1,68 @@
+/* ALGEMEEN */
+html,
+body {
+    color: #333333;
+    font-family: "proxima-nova", sans-serif !important;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    line-height: 20px;
+}
+body {
+    min-width: 1024px;
+}
+.noty_message {
+    text-align: center !important;
+}
+.noty_text {
+    color: #fff !important;
+    font-size: 12px !important;
+    text-align: center !important;
+}
+#noty_bottomRight_layout_container {
+    margin-bottom: 30px !important;
+    margin-right: 30px !important;
+}
+.fb_iframe_widget {
+    float: right;
+}
+.fa-star {
+    color: #ffc000;
+}
+.gly-rotate-90 {
+    -moz-transform: scaleX(-1) !important;
+    -o-transform: scaleX(-1) !important;
+    -webkit-transform: scaleX(-1) !important;
+    transform: scaleX(-1) !important;
+    filter: FlipH !important;
+    -ms-filter: "FlipH" !important;
+}
+/* vanaf hier css wesley */
+.witbg {
+    background-color: #FFF;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-bottom: 30px;
+}
+.prijsb {
+    color: #37b5d3;
+    font-weight: bold;
+}
+.vliegtuigPos {
+    position: relative;
+    right: 50px;
+}
+.hrStijl {
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top: 1px solid #FFF;
+}
+.overflow-auto {
+    overflow: auto;
+}
+.clear-both {
+    clear: both;
+}
