@@ -19,10 +19,10 @@ function Person(first, last, age, gender, interests) {
     this.age = age;
     this.gender = gender;
     this.interests = interests;
-    this.greeting = function() {
-        alert('Hi there ' + this.name.first + '.');
-    };
 }
+Person.prototype.greeting = function() {
+    alert('Hi there ' + this.name.first + '.');
+};
 Person.prototype.farewell = function() {
     console.log(this.name.first + ' has left the building.');
 }
@@ -44,3 +44,11 @@ Test.prototype.x = function() {
 Test.prototype.y = function() {
 
 }
+function Teacher(first, last, age, gender, interests, subject) {
+    Person.call(this, first, last, age, gender, interests);
+    
+    this.subject = subject;
+}
+
+var teacher = new Teacher('Heer', 'Bokel', 53, 'Male', 'Biology');
+console.log(teacher);
