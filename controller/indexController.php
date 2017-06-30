@@ -5,30 +5,60 @@ Class indexController Extends baseController
 
 	public function index()
 	{
-            // setup the URL, the CSS and the form data
-    $url = 'https://cssminifier.com/raw';
-    $css = file_get_contents('./public/css/template.css');
-    
-    $data = array(
-        'input' => $css,
-    );
+            /*$string = 'a:7:{i:1;a:1:{s:1:"V";s:4:"1800";}i:2;a:2:{s:1:"A";s:4:"0900";s:1:"V";s:4:"1800";}i:3;a:2:{s:1:"A";s:4:"0800";s:1:"V";s:4:"1700";}i:4;a:2:{s:1:"A";s:4:"1300";s:1:"V";s:4:"2000";}i:5;a:2:{s:1:"A";s:4:"0800";s:1:"V";s:4:"1800";}i:6;a:2:{s:1:"A";s:4:"0800";s:1:"V";s:4:"1800";}i:8;a:1:{s:1:"A";s:4:"0900";}}';
 
-    // init the request, set some info, send it and finally close it
-    $ch = curl_init($url);
+echo '<pre>';
+var_dump(unserialize($string));
 
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    $minified = curl_exec($ch);
-
-    var_dump($data);
-    curl_close($ch);
-
-    // output the $minified
-    echo $minified;
-    die;
+die;*/
+            //run_dat;
+            //ship_cd;
+            //sail_dat; //
+            //sail_day_qty; // used
+            //voyage_cd;
+            //package_type_cd;
+            //itinerary_desc;
+            //price_program_cd;
+            //category_cd;
+            //gateway_cd;
+            //sail_id; // used
+            //embark_port_cd;
+            //disembark_port_cd;
+            //meta_category_cd;
+            //total_pkg_tariff_amt;
+            //total_pkg_sgl_supp_amt;
+            //total_pkg_t4_adult_amt;
+            //total_pkg_t4_child_amt;
+            //total_pkg_t4_infant_amt;
+            //gtf_tariff_amt;
+            //gtf_sgl_supp_amt;
+            //gtf_t4_adult_amt;
+            //gtf_t4_child_amt;
+            //gtf_t4_infant_amt;
+            //fuel_suppl_comm_tariff_amt;
+            //fuel_suppl_comm_sgl_supp_amt;
+            //fuel_suppl_comm_t4_adult_amt;
+            //fuel_suppl_comm_t4_child_amt;
+            //fuel_suppl_comm_t4_infant_amt
+            //$object = $this->registry->db->query("SELECT * FROM cruises LIMIT 1")->fetch(PDO::FETCH_OBJ);
+            //die(var_dump($object->id));
+            set_time_limit(0);            
+        $db = new PDO("mysql:host=localhost;dbname=test", "root", "");   
+        $file = fopen('HOLLAND.txt', 'r');
+        //$content = file_get_contents('HOLLAND.txt', 'r');
+        echo '<pre>';
+        //$data = fgetcsv($file, 1000, ";");
+        $header = null;
+        while(($data = fgetcsv($file, 1000, ";")) !== false) {
+            if (!$header) {
+                $header = $data;
+            } else {
+                //var_dump($data[25]);
+                $db->query("INSERT INTO `lcn_crs` (`run_dat`, `ship_cd`, `sail_dat`, `sail_day_qty`, `voyage_cd`, `package_type_cd`, `itinerary_desc`, `price_program_cd`, `category_cd`, `gateway_cd`, `sail_id`, `embark_port_cd`, `disembark_port_cd`, `meta_category_cd`, `total_pkg_tariff_amt`, `total_pkg_sgl_supp_amt`, `total_pkg_t4_adult_amt`, `total_pkg_t4_child_amt`, `total_pkg_t4_infant_amt`, `gtf_tariff_amt`, `gtf_sgl_supp_amt`, `gtf_t4_adult_amt`, `gtf_t4_child_amt`, `gtf_t4_infant_amt`, `fuel_suppl_comm_tariff_amt`, `fuel_suppl_comm_sgl_supp_amt`, `fuel_suppl_comm_t4_adult_amt`, `fuel_suppl_comm_t4_child_amt`, `fuel_suppl_comm_t4_infant_amt`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."', '".$data['11']."', '".$data['12']."', '".$data['13']."', '".$data['14']."', '".$data['15']."', '".$data['16']."', '".$data['17']."', '".$data['18']."', '".$data['19']."', '".$data['20']."', '".$data['21']."', '".$data['22']."', '".$data['23']."', '".$data['24']."', '".$data['25']."', '".$data['26']."', '".$data['27']."', '".$data['28']."')");
+            }
+        }
+        die;
 		
 		$veyron = AutomobileFactory::create( 'Bugatti', 'Veyron' );
 		var_dump( $veyron );

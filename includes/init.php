@@ -28,5 +28,5 @@
  $registry = new registry;
 
  /*** create the database registry object ***/
- // $registry->db = db::getInstance();
+ $registry->db = db::getInstance();
 ?>
