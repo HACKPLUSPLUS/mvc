@@ -42,21 +42,36 @@ die;*/
             //fuel_suppl_comm_t4_child_amt;
             //fuel_suppl_comm_t4_infant_amt
             //$object = $this->registry->db->query("SELECT * FROM cruises LIMIT 1")->fetch(PDO::FETCH_OBJ);
+            //array(11) {
+//Run_dat
+//Sail_Id
+//Long_Ship_Nam
+//Sail_Dat
+//Port_Cd
+//Port_Nam
+//Arrival_Tim
+//Departure_Tim
+//offset_day_nbr
+//Voyage_cd
+//Brochure_Product_Desc
+
             //die(var_dump($object->id));
             set_time_limit(0);            
         $db = new PDO("mysql:host=localhost;dbname=test", "root", "");   
-        $file = fopen('HOLLAND.txt', 'r');
+        //$file = fopen('data/HOLLAND.txt', 'r');
+        $file = fopen('data/HOLLAND_Itinerary.txt', 'r');
         //$content = file_get_contents('HOLLAND.txt', 'r');
         echo '<pre>';
         //$data = fgetcsv($file, 1000, ";");
         $header = null;
         while(($data = fgetcsv($file, 1000, ";")) !== false) {
-            if (!$header) {
-                $header = $data;
-            } else {
-                //var_dump($data[25]);
-                $db->query("INSERT INTO `lcn_crs` (`run_dat`, `ship_cd`, `sail_dat`, `sail_day_qty`, `voyage_cd`, `package_type_cd`, `itinerary_desc`, `price_program_cd`, `category_cd`, `gateway_cd`, `sail_id`, `embark_port_cd`, `disembark_port_cd`, `meta_category_cd`, `total_pkg_tariff_amt`, `total_pkg_sgl_supp_amt`, `total_pkg_t4_adult_amt`, `total_pkg_t4_child_amt`, `total_pkg_t4_infant_amt`, `gtf_tariff_amt`, `gtf_sgl_supp_amt`, `gtf_t4_adult_amt`, `gtf_t4_child_amt`, `gtf_t4_infant_amt`, `fuel_suppl_comm_tariff_amt`, `fuel_suppl_comm_sgl_supp_amt`, `fuel_suppl_comm_t4_adult_amt`, `fuel_suppl_comm_t4_child_amt`, `fuel_suppl_comm_t4_infant_amt`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."', '".$data['11']."', '".$data['12']."', '".$data['13']."', '".$data['14']."', '".$data['15']."', '".$data['16']."', '".$data['17']."', '".$data['18']."', '".$data['19']."', '".$data['20']."', '".$data['21']."', '".$data['22']."', '".$data['23']."', '".$data['24']."', '".$data['25']."', '".$data['26']."', '".$data['27']."', '".$data['28']."')");
-            }
+            //if (!$header) {
+                //$header = $data;
+            //} else {
+                var_dump($data);
+                //$db->query("INSERT INTO `lcn_crs` (`run_dat`, `ship_cd`, `sail_dat`, `sail_day_qty`, `voyage_cd`, `package_type_cd`, `itinerary_desc`, `price_program_cd`, `category_cd`, `gateway_cd`, `sail_id`, `embark_port_cd`, `disembark_port_cd`, `meta_category_cd`, `total_pkg_tariff_amt`, `total_pkg_sgl_supp_amt`, `total_pkg_t4_adult_amt`, `total_pkg_t4_child_amt`, `total_pkg_t4_infant_amt`, `gtf_tariff_amt`, `gtf_sgl_supp_amt`, `gtf_t4_adult_amt`, `gtf_t4_child_amt`, `gtf_t4_infant_amt`, `fuel_suppl_comm_tariff_amt`, `fuel_suppl_comm_sgl_supp_amt`, `fuel_suppl_comm_t4_adult_amt`, `fuel_suppl_comm_t4_child_amt`, `fuel_suppl_comm_t4_infant_amt`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."', '".$data['11']."', '".$data['12']."', '".$data['13']."', '".$data['14']."', '".$data['15']."', '".$data['16']."', '".$data['17']."', '".$data['18']."', '".$data['19']."', '".$data['20']."', '".$data['21']."', '".$data['22']."', '".$data['23']."', '".$data['24']."', '".$data['25']."', '".$data['26']."', '".$data['27']."', '".$data['28']."')");
+                $db->query("INSERT INTO `lcn_tnrrs` (`run_dat`, `sail_id`, `long_ship_nam`, `sail_dat`, `port_cd`, `port_nam`, `arrival_tim`, `departure_tim`, `offset_day_nbr`, `voyage_cd`, `brochure_product_desc`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."')");
+           // }
         }
         die;
 		
