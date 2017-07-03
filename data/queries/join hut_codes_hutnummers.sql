@@ -10,3 +10,7 @@ AND data_hut_nummers.hutnummer = 8002;
 SELECT DISTINCT(data_hut_nummers.hutnummer) FROM data_hut_codes
 INNER JOIN data_hut_nummers ON data_hut_nummers.categorie_code = data_hut_codes.code
 WHERE data_hut_codes.code = 'VF';
+SELECT * FROM data_hut_codes
+INNER JOIN data_hut_nummers ON data_hut_nummers.categorie_code = data_hut_codes.code
+WHERE data_hut_codes.code = 'VF';
+/*AND data_hut_nummers.dek = 8;*/
