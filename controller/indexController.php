@@ -5,6 +5,7 @@ Class indexController Extends baseController
 
 	public function index()
 	{
+            
             /*$string = 'a:7:{i:1;a:1:{s:1:"V";s:4:"1800";}i:2;a:2:{s:1:"A";s:4:"0900";s:1:"V";s:4:"1800";}i:3;a:2:{s:1:"A";s:4:"0800";s:1:"V";s:4:"1700";}i:4;a:2:{s:1:"A";s:4:"1300";s:1:"V";s:4:"2000";}i:5;a:2:{s:1:"A";s:4:"0800";s:1:"V";s:4:"1800";}i:6;a:2:{s:1:"A";s:4:"0800";s:1:"V";s:4:"1800";}i:8;a:1:{s:1:"A";s:4:"0900";}}';
 
 echo '<pre>';
@@ -132,48 +133,49 @@ die;*/
 //"sequence"
 //"day_of_week"
 //"port_code"
-  [8]=>
-  string(10) "cntry_code"
-  [9]=>
-  string(9) "port_name"
-  [10]=>
-  string(7) "arrival"
-  [11]=>
-  string(9) "departure"
-  [12]=>
-  string(4) "type"
-  [13]=>
-  string(7) "mktcode"
-  [14]=>
-  string(12) "market_descr"
-  [15]=>
-  string(8) "supermkt"
-  [16]=>
-  string(17) "Supermarket_Descr"
-}
+//"cntry_code"
+//"port_name"
+//"arrival"
+//"departure"
+//"type"
+//"mktcode"
+//"market_descr"
+//"supermkt"
+//"Supermarket_Descr
 
 
 
             //die(var_dump($object->id));
-            set_time_limit(0);            
-        $db = new PDO("mysql:host=localhost;dbname=test", "root", "");   
+            //set_time_limit(0);            
+        //$db = new PDO("mysql:host=localhost;dbname=test", "root", "");   
         //$file = fopen('data/HOLLAND.txt', 'r');
         //$file = fopen('data/HOLLAND_Itinerary.txt', 'r');
         //$file = fopen('data/162223-Price (Net).csv', 'r');
-        $file = fopen('data/OCI-Itinerary.csv', 'r');
+        //$file = fopen('data/OCI-Itinerary.csv', 'r');
+        //$file = fopen('data/DCL_PriceExt_EUR.txt', 'r');
          
         //$content = file_get_contents('HOLLAND.txt', 'r');
-        echo '<pre>';
+        //echo '<pre>';
         //$data = fgetcsv($file, 1000, ";");
+
         $header = null;
         while(($data = fgetcsv($file, 1000, ";")) !== false) {
+        //$header = null;
+        //$line = 0;
+        //while(($data = fgetcsv($file, 1000, ",")) !== false) {
+            //$line++;
+            //if($line > 1000)
+            //{
+                //break;
+            //}
             //if (!$header) {
                 //$header = $data;
             //} else {
-                var_dump($data);
+                //var_dump($data);
                 //$db->query("INSERT INTO `lcn_crs` (`run_dat`, `ship_cd`, `sail_dat`, `sail_day_qty`, `voyage_cd`, `package_type_cd`, `itinerary_desc`, `price_program_cd`, `category_cd`, `gateway_cd`, `sail_id`, `embark_port_cd`, `disembark_port_cd`, `meta_category_cd`, `total_pkg_tariff_amt`, `total_pkg_sgl_supp_amt`, `total_pkg_t4_adult_amt`, `total_pkg_t4_child_amt`, `total_pkg_t4_infant_amt`, `gtf_tariff_amt`, `gtf_sgl_supp_amt`, `gtf_t4_adult_amt`, `gtf_t4_child_amt`, `gtf_t4_infant_amt`, `fuel_suppl_comm_tariff_amt`, `fuel_suppl_comm_sgl_supp_amt`, `fuel_suppl_comm_t4_adult_amt`, `fuel_suppl_comm_t4_child_amt`, `fuel_suppl_comm_t4_infant_amt`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."', '".$data['11']."', '".$data['12']."', '".$data['13']."', '".$data['14']."', '".$data['15']."', '".$data['16']."', '".$data['17']."', '".$data['18']."', '".$data['19']."', '".$data['20']."', '".$data['21']."', '".$data['22']."', '".$data['23']."', '".$data['24']."', '".$data['25']."', '".$data['26']."', '".$data['27']."', '".$data['28']."')");
                 //$db->query("INSERT INTO `lcn_tnrrs` (`run_dat`, `sail_id`, `long_ship_nam`, `sail_dat`, `port_cd`, `port_nam`, `arrival_tim`, `departure_tim`, `offset_day_nbr`, `voyage_cd`, `brochure_product_desc`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."')");
                 //$db->query("INSERT INTO `cn_prcs` (`run_date`, `cruise`, `ship`, `itin_desc`, `embark_date`, `emb_port_code`, `emb_port_name`, `disembark_date`, `disembark_port`, `disembark_port_desc`, `voy_length`, `category`, `cat_status`, `promo_code`, `promo_desc`, `office`, `currency`, `broch_fare_amt`, `fare_amt`, `fare_type`, `broch_3_4_pax`, `fare_3_4_pax`, `port_charge`, `non_comm_chrg`, `mktcode`, `market_descr`, `supermkt`, `supermarket_descr`, `bonus_disc`, `bonus_disc_3_4`, `co_air_credit`, `co_air_credit_3_4`, `hotel_credit`, `hotel_credit_3_4`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."', '".$data['11']."', '".$data['12']."', '".$data['13']."', '".$data['14']."', '".$data['15']."', '".$data['16']."', '".$data['17']."', '".$data['18']."', '".$data['19']."', '".$data['20']."', '".$data['21']."', '".$data['22']."', '".$data['23']."', '".$data['24']."', '".$data['25']."', '".$data['26']."', '".$data['27']."', '".$data['28']."', '".$data['29']."', '".$data['30']."', '".$data['31']."', '".$data['32']."', '".$data['33']."')");
+                //$db->query("INSERT INTO `dsn_crs` (`ship`, `vacstart`, `category`, `itin`, `occupancy`, `price12`, `adultprice35`, `childprice35`, `infantprice35`, `pricetaxes`, `sailid`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."')");
                 //var_dump($db->errorInfo());
            // }
         }
