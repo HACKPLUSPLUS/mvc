@@ -166,7 +166,7 @@ die;*/
         echo '<pre>';
         //$data = fgetcsv($file, 1000, ";");
         $header = null;
-        while(($data = fgetcsv($file, 1000, ",")) !== false) {
+        while(($data = fgetcsv($file, 1000, ";")) !== false) {
             //if (!$header) {
                 //$header = $data;
             //} else {
