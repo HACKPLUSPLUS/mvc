@@ -84,6 +84,28 @@ DELETE FROM `cn_prcs`;
 /*!40000 ALTER TABLE `cn_prcs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cn_prcs` ENABLE KEYS */;
 
+-- Dumping structure for table test.dsn_crs
+CREATE TABLE IF NOT EXISTS `dsn_crs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ship` varchar(50) NOT NULL,
+  `vacstart` date NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `itin` varchar(50) NOT NULL,
+  `occupancy` int(10) NOT NULL,
+  `price12` double(5,2) NOT NULL,
+  `adultprice35` double(5,2) NOT NULL,
+  `childprice35` double(5,2) NOT NULL,
+  `infantprice35` double(5,2) NOT NULL,
+  `pricetaxes` double(5,2) NOT NULL,
+  `sailid` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table test.dsn_crs: ~0 rows (approximately)
+DELETE FROM `dsn_crs`;
+/*!40000 ALTER TABLE `dsn_crs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dsn_crs` ENABLE KEYS */;
+
 -- Dumping structure for table test.lcn_crs
 CREATE TABLE IF NOT EXISTS `lcn_crs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
