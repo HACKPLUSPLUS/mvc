@@ -157,6 +157,9 @@ die;*/
         //$content = file_get_contents('HOLLAND.txt', 'r');
         //echo '<pre>';
         //$data = fgetcsv($file, 1000, ";");
+
+        $header = null;
+        while(($data = fgetcsv($file, 1000, ";")) !== false) {
         //$header = null;
         //$line = 0;
         //while(($data = fgetcsv($file, 1000, ",")) !== false) {
@@ -175,7 +178,7 @@ die;*/
                 //$db->query("INSERT INTO `dsn_crs` (`ship`, `vacstart`, `category`, `itin`, `occupancy`, `price12`, `adultprice35`, `childprice35`, `infantprice35`, `pricetaxes`, `sailid`) VALUES ('".$data['0']."', '".$data['1']."', '".$data['2']."', '".$data['3']."', '".$data['4']."', '".$data['5']."', '".$data['6']."', '".$data['7']."', '".$data['8']."', '".$data['9']."', '".$data['10']."')");
                 //var_dump($db->errorInfo());
            // }
-        //}
+        }
         die;
 		
 		$veyron = AutomobileFactory::create( 'Bugatti', 'Veyron' );
