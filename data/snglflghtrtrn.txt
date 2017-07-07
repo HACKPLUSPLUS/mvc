@@ -1,0 +1,4325 @@
+<TWSResponse schema="AS2LF">
+	<data>
+		<request>
+			<Air>
+				<RouteData>1-</RouteData>
+				<ItinList count="1">
+					<Segment number="1">
+						<SegmentType>A</SegmentType>
+						<Depart>FCO</Depart>
+						<Arrive>AMS</Arrive>
+						<DepartDate>03082017</DepartDate>
+						<DepartDateRange>0</DepartDateRange>
+						<DepartTime>0000</DepartTime>
+						<ViaCity>   </ViaCity>
+						<StopDays>0</StopDays>
+					</Segment>
+				</ItinList>
+				<DirectFlightsPreferred>1</DirectFlightsPreferred>
+				<DatesVariable>0</DatesVariable>
+				<AcceptChangeAirport>1</AcceptChangeAirport>
+				<AcceptMixedCarriers>0</AcceptMixedCarriers>
+				<ServiceLevel>N</ServiceLevel>
+				<PreferredAirline/>
+			</Air>
+		</request>
+		<searchResults handler="FLIGHTSEARCH" searchType="LF">
+			<departCity>ROME, Italy</departCity>
+			<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+			<departDate>Thu 03 Aug 2017</departDate>
+			<returnDate>Sat 01 Jul 2017</returnDate>
+			<fareOptions count="17">
+				<fareOption bookId="FLID" value="FL17" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL17</fareAvId>
+							<fareNumber0>8</fareNumber0>
+							<fareId>*VEZCT0VNTUBMVllGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>VY</code>
+							<name>
+								<![CDATA[Vueling Airlines S.A.]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       259.98</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      259.98</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    129.99</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    129.99</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *VY</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="5">
+								<flight id="5">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>5</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>VY</code>
+										<name>
+											<![CDATA[Vueling Airlines S.A.]]>
+										</name>
+									</carrier>
+									<flightCode>VY 6292</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:05:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:45:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL4" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL4</fareAvId>
+							<fareNumber0>78</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQFBJQlJPTUFNU1paT1dOVlkgICAgICAzQg==</fareId>
+							<fareSource>
+								<code>P</code>
+								<name>Published</name>
+								<description> Published</description>
+								<database>
+									<code>PUB</code>
+									<description>Published</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract>ZOWNVY</contract>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>Z</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>+</code>
+								<description/>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code/>
+								<description>none</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code/>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek>ZOWNVY</midweek>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>01JAN00</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>ROM</code>
+									<name>Rome</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>IB</code>
+							<name>
+								<![CDATA[Iberia Lineas Aereas De Espana S.A.]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       313.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      313.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    119.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    156.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString/>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="21">
+								<flight id="21">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>21</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>IB</code>
+										<name>
+											<![CDATA[Iberia Lineas Aereas De Espana S.A.]]>
+										</name>
+									</carrier>
+									<flightCode>IB 5250</flightCode>
+									<codeShared>1</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>VY</code>
+										<name>Vueling Airlines S.A.</name>
+									</operator>
+									<equipment>
+										<code>320</code>
+										<name>
+											<![CDATA[Airbus Industrie A320-100/200]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:05:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:45:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>Z</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:40</totalFlyTime>
+								</flight>
+								<bestPrice>119</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL3" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL3</fareAvId>
+							<fareNumber0>77</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQFBCQVJPTUFNU01NT1dWWSAgICAgICAzQg==</fareId>
+							<fareSource>
+								<code>P</code>
+								<name>Published</name>
+								<description> Published</description>
+								<database>
+									<code>PUB</code>
+									<description>Published</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract>MOWVY</contract>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>M</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>+</code>
+								<description/>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code/>
+								<description>none</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code/>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek>MOWVY</midweek>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>01JAN00</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>ROM</code>
+									<name>Rome</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>BA</code>
+							<name>
+								<![CDATA[British Airways  P.L.C]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       313.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      313.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    119.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    156.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString/>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="6">
+								<flight id="6">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>6</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>BA</code>
+										<name>
+											<![CDATA[British Airways  P.L.C]]>
+										</name>
+									</carrier>
+									<flightCode>BA 8131</flightCode>
+									<codeShared>1</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>VY</code>
+										<name>Vueling Airlines S.A.</name>
+									</operator>
+									<equipment>
+										<code>320</code>
+										<name>
+											<![CDATA[Airbus Industrie A320-100/200]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:05:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:45:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>M</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:40</totalFlyTime>
+								</flight>
+								<bestPrice>119</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL1" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL1</fareAvId>
+							<fareNumber0>79</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQFBWWVJPTUFNU1JST1dWWSAgICAgICAzQg==</fareId>
+							<fareSource>
+								<code>P</code>
+								<name>Published</name>
+								<description> Published</description>
+								<database>
+									<code>PUB</code>
+									<description>Published</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract>ROWVY</contract>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>R</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>+</code>
+								<description/>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code/>
+								<description>none</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code/>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek>ROWVY</midweek>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>01JAN00</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>ROM</code>
+									<name>Rome</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>VY</code>
+							<name>
+								<![CDATA[Vueling Airlines S.A.]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       313.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      313.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    119.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    156.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated/>
+								<midweek>119.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString/>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="5">
+								<flight id="5">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>5</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>VY</code>
+										<name>
+											<![CDATA[Vueling Airlines S.A.]]>
+										</name>
+									</carrier>
+									<flightCode>VY 6292</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>320</code>
+										<name>
+											<![CDATA[Airbus Industrie A320-100/200]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:05:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:45:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>R</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:40</totalFlyTime>
+								</flight>
+								<bestPrice>119</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL11" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL11</fareAvId>
+							<fareNumber0>7</fareNumber0>
+							<fareId>*VEZCT0VNTUBMVTJGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>U2</code>
+							<name>
+								<![CDATA[Easyjet Airline Co Ltd]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       328.98</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      328.98</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    154.49</fare>
+									<taxes>     10.00</taxes>
+									<fees>      0.00</fees>
+									<total>    164.49</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *U2</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="43">
+								<flight id="43">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>43</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>U2</code>
+										<name>
+											<![CDATA[Easyjet Airline Co Ltd]]>
+										</name>
+									</carrier>
+									<flightCode>EZY 7976</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:10:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:40:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL14" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL14</fareAvId>
+							<fareNumber0>5</fareNumber0>
+							<fareId>*VEZCT0VNTUBMSFZGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>HV</code>
+							<name>
+								<![CDATA[Transavia Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       354.00</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      354.00</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    177.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    177.00</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *HV</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="42">
+								<flight id="42">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>42</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>HV</code>
+										<name>
+											<![CDATA[Transavia Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>HV 6036</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>09:55:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:15:00</time>
+										<dayOffset/>
+										<city>
+											<code>RTM</code>
+											<name>Rotterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL8" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL8</fareAvId>
+							<fareNumber0>9</fareNumber0>
+							<fareId>*VEZCT0VNTUBMSFZGQ09SVE1YICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>RTM</code>
+									<name>Rotterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>HV</code>
+							<name>
+								<![CDATA[Transavia Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       354.00</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      354.00</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    177.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    177.00</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *HV</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="42">
+								<flight id="42">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>42</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>HV</code>
+										<name>
+											<![CDATA[Transavia Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>HV 6036</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>09:55:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:15:00</time>
+										<dayOffset/>
+										<city>
+											<code>RTM</code>
+											<name>Rotterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL12" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL12</fareAvId>
+							<fareNumber0>7</fareNumber0>
+							<fareId>*VEZCT0VNTUBMVTJGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>U2</code>
+							<name>
+								<![CDATA[Easyjet Airline Co Ltd]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       362.98</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      362.98</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    181.49</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    181.49</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *U2</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="43">
+								<flight id="43">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>43</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>U2</code>
+										<name>
+											<![CDATA[Easyjet Airline Co Ltd]]>
+										</name>
+									</carrier>
+									<flightCode>EZY 7976</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:10:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:40:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL5" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL5</fareAvId>
+							<fareNumber0>79</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQEFLTEZDT0FNU0IgICAgICAgICAgICBSUw==</fareId>
+							<fareSource>
+								<code>P</code>
+								<name>Published</name>
+								<description> Published</description>
+								<database>
+									<code>PUB</code>
+									<description>Published</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>B</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>KL</code>
+							<name>
+								<![CDATA[Klm Royal Dutch Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       363.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      363.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    144.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    181.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *KL</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="28">
+								<flight id="28">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>28</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>KL</code>
+										<name>
+											<![CDATA[Klm Royal Dutch Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>KL 1604</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>73H</code>
+										<name>
+											<![CDATA[Boeing 737 Passenger Jet]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>17:25:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>20:00:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>H</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:35</totalFlyTime>
+								</flight>
+								<bestPrice>1000</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL15" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL15</fareAvId>
+							<fareNumber0>5</fareNumber0>
+							<fareId>*VEZCT0VNTUBMSFZGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>HV</code>
+							<name>
+								<![CDATA[Transavia Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       400.00</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      400.00</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    200.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    200.00</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *HV</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="42">
+								<flight id="42">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>42</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>HV</code>
+										<name>
+											<![CDATA[Transavia Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>HV 6036</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>09:55:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:15:00</time>
+										<dayOffset/>
+										<city>
+											<code>RTM</code>
+											<name>Rotterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL9" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL9</fareAvId>
+							<fareNumber0>9</fareNumber0>
+							<fareId>*VEZCT0VNTUBMSFZGQ09SVE1YICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>RTM</code>
+									<name>Rotterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>HV</code>
+							<name>
+								<![CDATA[Transavia Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       400.00</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      400.00</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    200.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    200.00</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *HV</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="42">
+								<flight id="42">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>42</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>HV</code>
+										<name>
+											<![CDATA[Transavia Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>HV 6036</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>09:55:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:15:00</time>
+										<dayOffset/>
+										<city>
+											<code>RTM</code>
+											<name>Rotterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL6" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL6</fareAvId>
+							<fareNumber0>79</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQEFLTEZDT0FNU0IgICAgICAgICAgICBSUw==</fareId>
+							<fareSource>
+								<code>P</code>
+								<name>Published</name>
+								<description> Published</description>
+								<database>
+									<code>PUB</code>
+									<description>Published</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>B</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>KL</code>
+							<name>
+								<![CDATA[Klm Royal Dutch Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       411.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      411.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    168.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    205.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *KL</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="25">
+								<flight id="25">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>25</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>KL</code>
+										<name>
+											<![CDATA[Klm Royal Dutch Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>KL 1596</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>73H</code>
+										<name>
+											<![CDATA[Boeing 737 Passenger Jet]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>06:30:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>09:00:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>K</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:30</totalFlyTime>
+								</flight>
+								<bestPrice>1000</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+							<AvOption bookId="OID1" value="27">
+								<flight id="27">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>27</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>KL</code>
+										<name>
+											<![CDATA[Klm Royal Dutch Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>KL 1602</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>73H</code>
+										<name>
+											<![CDATA[Boeing 737 Passenger Jet]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>12:40:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>15:10:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>K</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:30</totalFlyTime>
+								</flight>
+								<bestPrice>1000</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+							<AvOption bookId="OID1" value="29">
+								<flight id="29">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>29</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>KL</code>
+										<name>
+											<![CDATA[Klm Royal Dutch Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>KL 1608</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>73H</code>
+										<name>
+											<![CDATA[Boeing 737 Passenger Jet]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>19:35:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>21:55:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>K</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:20</totalFlyTime>
+								</flight>
+								<bestPrice>1000</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL13" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL13</fareAvId>
+							<fareNumber0>7</fareNumber0>
+							<fareId>*VEZCT0VNTUBMVTJGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>U2</code>
+							<name>
+								<![CDATA[Easyjet Airline Co Ltd]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       448.98</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      448.98</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    224.49</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    224.49</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *U2</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="43">
+								<flight id="43">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>43</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>U2</code>
+										<name>
+											<![CDATA[Easyjet Airline Co Ltd]]>
+										</name>
+									</carrier>
+									<flightCode>EZY 7976</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:10:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:40:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL16" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL16</fareAvId>
+							<fareNumber0>5</fareNumber0>
+							<fareId>*VEZCT0VNTUBMSFZGQ09BTVNYICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>HV</code>
+							<name>
+								<![CDATA[Transavia Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       454.00</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      454.00</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    227.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    227.00</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *HV</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="42">
+								<flight id="42">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>42</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>HV</code>
+										<name>
+											<![CDATA[Transavia Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>HV 6036</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>09:55:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:15:00</time>
+										<dayOffset/>
+										<city>
+											<code>RTM</code>
+											<name>Rotterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL10" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL10</fareAvId>
+							<fareNumber0>9</fareNumber0>
+							<fareId>*VEZCT0VNTUBMSFZGQ09SVE1YICAgICAgICAgICAgMQ==</fareId>
+							<fareSource>
+								<code>L</code>
+								<name>Low Cost</name>
+								<description> Lowcost</description>
+								<database>
+									<code>TFUSION</code>
+									<description>Lowcost</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>TF</code>
+								<name>Travelfusion</name>
+							</fareGDS>
+							<fareGDSaccessCode>TFBOEMM</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>X</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>RTM</code>
+									<name>Rotterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>HV</code>
+							<name>
+								<![CDATA[Transavia Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       454.00</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      454.00</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    227.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>    227.00</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1.00</calculated>
+								<midweek>1.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *HV</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="42">
+								<flight id="42">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>42</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>HV</code>
+										<name>
+											<![CDATA[Transavia Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>HV 6036</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>   </code>
+										<name>
+											<![CDATA[   ]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>09:55:00</time>
+										<checkInTimeMinutes>120</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:15:00</time>
+										<dayOffset/>
+										<city>
+											<code>RTM</code>
+											<name>Rotterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>X</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>00:00</totalFlyTime>
+								</flight>
+								<bestPrice/>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL2" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL2</fareAvId>
+							<fareNumber0>67</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQE5WWVJPTUFNU05ORkxFWCAgICAgICA1UA==</fareId>
+							<fareSource>
+								<code>N</code>
+								<name>Negotiated</name>
+								<description> Negotiated</description>
+								<database>
+									<code>PUBSPEC</code>
+									<description>Cat35</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract>NFLEX</contract>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>N</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>+</code>
+								<description/>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code/>
+								<description>none</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code/>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek>NFLEX</midweek>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>01JAN00</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>ROM</code>
+									<name>Rome</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>VY</code>
+							<name>
+								<![CDATA[Vueling Airlines S.A.]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       485.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      485.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    205.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    242.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>205.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated/>
+								<midweek>205.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>205.00</calculated>
+								<midweek>205.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString/>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="5">
+								<flight id="5">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>5</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>VY</code>
+										<name>
+											<![CDATA[Vueling Airlines S.A.]]>
+										</name>
+									</carrier>
+									<flightCode>VY 6292</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>320</code>
+										<name>
+											<![CDATA[Airbus Industrie A320-100/200]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:05:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>12:45:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>N</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:40</totalFlyTime>
+								</flight>
+								<bestPrice>205</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+				<fareOption bookId="FLID" value="FL7" NR="1">
+					<fare>
+						<identity>
+							<fareAvId>FL7</fareAvId>
+							<fareNumber0>79</fareNumber0>
+							<fareId>*MUc3SDA5OkFDQEFLTEZDT0FNU0IgICAgICAgICAgICBSUw==</fareId>
+							<fareSource>
+								<code>P</code>
+								<name>Published</name>
+								<description> Published</description>
+								<database>
+									<code>PUB</code>
+									<description>Published</description>
+								</database>
+								<distribution/>
+								<adjCode/>
+								<contract/>
+							</fareSource>
+							<fareIsApplicable>Yes</fareIsApplicable>
+							<fareHasAvailability>flpaUnknown</fareHasAvailability>
+							<fareIsPreferred>No</fareIsPreferred>
+							<fareIsSpecial>No</fareIsSpecial>
+							<fareIsInclusiveTour>No</fareIsInclusiveTour>
+							<fareComment/>
+							<fareGDS>
+								<code>1G</code>
+								<name>Galileo</name>
+							</fareGDS>
+							<fareGDSaccessCode>1G7H09</fareGDSaccessCode>
+							<fareSupplier/>
+							<fareServiceLevel>Economy</fareServiceLevel>
+							<fareJourney>OW</fareJourney>
+							<farePTC>
+								<code>AD</code>
+								<name>Adult</name>
+							</farePTC>
+							<fareBookingClass>B</fareBookingClass>
+							<fareAdvancePurchase>
+								<code>0</code>
+								<description>0 days</description>
+							</fareAdvancePurchase>
+							<fareMinimumStay>
+								<code>0</code>
+								<description>0 day(s)</description>
+							</fareMinimumStay>
+							<fareMaximumStay>
+								<code>1Y</code>
+								<description>1 year</description>
+							</fareMaximumStay>
+							<fareBasis>
+								<midweek/>
+								<weekend/>
+							</fareBasis>
+							<fareSeason>
+								<seasonCode> </seasonCode>
+								<outbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</outbound>
+								<inbound>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</inbound>
+								<ticket>
+									<start>01JAN00</start>
+									<end>31DEC99</end>
+								</ticket>
+							</fareSeason>
+							<fareTravelDays>
+								<outbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</outbound>
+								<inbound>
+									<midweek>MTWTFSS</midweek>
+									<weekend>-------</weekend>
+								</inbound>
+							</fareTravelDays>
+							<ticketingDeadline/>
+						</identity>
+						<locality>
+							<departure>
+								<city>
+									<code>FCO</code>
+									<name>Rome Fiumicino</name>
+								</city>
+							</departure>
+							<arrival>
+								<city>
+									<code>AMS</code>
+									<name>Amsterdam</name>
+								</city>
+							</arrival>
+						</locality>
+						<carrier>
+							<code>KL</code>
+							<name>
+								<![CDATA[Klm Royal Dutch Airlines]]>
+							</name>
+						</carrier>
+						<pricing>
+							<totalPrice>
+								<totalPriceString>EUR       851.48</totalPriceString>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<amount>      851.48</amount>
+							</totalPrice>
+							<priceBreakdown>
+								<adult count="2">
+									<fare>    388.00</fare>
+									<taxes>     31.74</taxes>
+									<fees>      6.00</fees>
+									<total>    425.74</total>
+								</adult>
+								<child count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</child>
+								<infant count="0">
+									<fare>      0.00</fare>
+									<taxes>      0.00</taxes>
+									<fees>      0.00</fees>
+									<total>      0.00</total>
+								</infant>
+							</priceBreakdown>
+							<nettNettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettNettPrice>
+							<nettPrice>
+								<currency>
+									<code/>
+									<name/>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</nettPrice>
+							<sellPrice>
+								<currency>
+									<code>EUR</code>
+									<name>Euro</name>
+								</currency>
+								<calculated>1000.00</calculated>
+								<midweek>1000.00</midweek>
+								<weekend/>
+								<extraWeekend/>
+							</sellPrice>
+						</pricing>
+						<travelPolicyCompliance/>
+						<availabilityEstimate>
+							<flightsOutbound>0</flightsOutbound>
+							<flightsInbound>0</flightsInbound>
+						</availabilityEstimate>
+						<routingString>via *KL</routingString>
+					</fare>
+					<flightOptions>
+						<flightSegments segmentNo="1">
+							<departDate>Thu 03 Aug 2017</departDate>
+							<departCity>ROME, Italy</departCity>
+							<arriveCity>AMSTERDAM, Netherlands</arriveCity>
+							<AvOption bookId="OID1" value="26">
+								<flight id="26">
+									<leg>
+										<bookId>OID1</bookId>
+										<value>26</value>
+										<number>1</number>
+										<route>1</route>
+									</leg>
+									<carrier>
+										<code>KL</code>
+										<name>
+											<![CDATA[Klm Royal Dutch Airlines]]>
+										</name>
+									</carrier>
+									<flightCode>KL 1598</flightCode>
+									<codeShared>0</codeShared>
+									<classDiffers>false</classDiffers>
+									<operator>
+										<code>  </code>
+										<name/>
+									</operator>
+									<equipment>
+										<code>73J</code>
+										<name>
+											<![CDATA[Boeing 737-900 Passenger]]>
+										</name>
+									</equipment>
+									<departure>
+										<date>2017-08-03</date>
+										<time>10:20:00</time>
+										<checkInTimeMinutes>60</checkInTimeMinutes>
+										<city>
+											<code>FCO</code>
+											<name>Rome Fiumicino</name>
+										</city>
+									</departure>
+									<arrival>
+										<date>2017-08-03</date>
+										<time>13:00:00</time>
+										<dayOffset/>
+										<city>
+											<code>AMS</code>
+											<name>Amsterdam</name>
+										</city>
+									</arrival>
+									<stops>0</stops>
+									<classCodeList>
+										<item>
+											<code>B</code>
+											<name>Economy</name>
+										</item>
+									</classCodeList>
+									<notes/>
+									<totalFlyTime>02:40</totalFlyTime>
+								</flight>
+								<bestPrice>1000</bestPrice>
+								<bestWeight>0</bestWeight>
+							</AvOption>
+						</flightSegments>
+					</flightOptions>
+				</fareOption>
+			</fareOptions>
+		</searchResults>
+		<bookingOptions>
+			<quotation>
+				<item type="bestbuy">
+					<quoteResult>0</quoteResult>
+					<quoteResultMessage>Unable to obtain quotation for the flights selected</quoteResultMessage>
+				</item>
+				<item type="standard">
+					<quoteResult>0</quoteResult>
+					<quoteResultMessage>Unable to obtain quotation for the flights selected</quoteResultMessage>
+				</item>
+				<extraQuotes>
+					<QuoteList_Air count="0"/>
+				</extraQuotes>
+			</quotation>
+			<bookendOptions>
+				<status>beoNone</status>
+				<message>
+					<![CDATA[Er zijn geen mogelijkheden om deze boeking af te sluiten. Waarschijnlijk is er niet meer genoeg tijd om de tickets uit te geven.]]>
+				</message>
+			</bookendOptions>
+			<paymentOptions>
+				<item bookId="paymentOptionId" value="0">
+					<paymentOptionId>0</paymentOptionId>
+					<paymentCardType>CC</paymentCardType>
+					<payOptionCode/>
+					<payOptionName/>
+					<paymentCardNumber/>
+					<paymentCardExpiryDate/>
+					<payOptionCardHolder/>
+					<description/>
+				</item>
+				<item bookId="paymentOptionId" value="1">
+					<paymentOptionId>1</paymentOptionId>
+					<description>to account</description>
+				</item>
+			</paymentOptions>
+			<additionalParameters>
+
+			</additionalParameters>
+		</bookingOptions>
+		<booking>
+			<contactdetails>
+				<bookBookerName>Cruisereizen Api</bookBookerName>
+				<bookPhone/>
+				<bookEmail>backoffice@cruisereizen.nl</bookEmail>
+				<bookCostCentre1>AFFAPI</bookCostCentre1>
+				<bookCostCentre2/>
+				<bookProjectCentre/>
+				<bookReasonForTravel/>
+				<bookUserReference/>
+				<bookPurchaseOrder/>
+				<name>Cruisereizen Api</name>
+				<phone/>
+				<email>backoffice@cruisereizen.nl</email>
+				<mobileNumber/>
+				<costcentre>AFFAPI</costcentre>
+				<projcentre/>
+				<rft/>
+				<reference/>
+				<purchaseorder/>
+				<bookusername/>
+				<requestSMSService>
+					<requested>N</requested>
+					<mobileNumber/>
+				</requestSMSService>
+			</contactdetails>
+			<passengers>
+				<passenger id="1">
+					<pty>A</pty>
+					<paxKind>A</paxKind>
+					<paxType>M</paxType>
+					<profileId/>
+					<title>Mr</title>
+					<firstname/>
+					<surname/>
+					<dateofbirth>dd/mm/yyyy</dateofbirth>
+					<mealRequest/>
+					<additionalParameters>
+
+					</additionalParameters>
+					<bluebizCardNumber/>
+					<passports>
+
+					</passports>
+				</passenger>
+				<passenger id="2">
+					<pty>A</pty>
+					<paxKind>A</paxKind>
+					<paxType>M</paxType>
+					<profileId/>
+					<title>Mr</title>
+					<firstname/>
+					<surname/>
+					<dateofbirth>dd/mm/yyyy</dateofbirth>
+					<mealRequest/>
+					<additionalParameters>
+
+					</additionalParameters>
+					<bluebizCardNumber/>
+					<passports>
+
+					</passports>
+				</passenger>
+			</passengers>
+			<FSNData>
+				<emailAddress/>
+				<homeFoneNumber/>
+				<businessFoneNumber/>
+				<mobileFoneNumber/>
+			</FSNData>
+			<itinerary>
+				<Trn>
+					<ItinList count="1">
+						<Segment number="1">
+							<SegmentType>A</SegmentType>
+							<Depart>FCO</Depart>
+							<Arrive>AMS</Arrive>
+							<DepartDate>03082017</DepartDate>
+							<DepartDateRange>0</DepartDateRange>
+							<DepartTime>0000</DepartTime>
+							<ViaCity>   </ViaCity>
+							<StopDays>0</StopDays>
+						</Segment>
+					</ItinList>
+				</Trn>
+			</itinerary>
+			<quote>
+
+			</quote>
+			<paymentdetails>
+				<cctype/>
+				<ccName/>
+				<ccnumb/>
+				<expdate/>
+				<securenumber/>
+				<issuenumber/>
+				<issuedate/>
+				<issuebank/>
+				<contactdetails>
+					<name/>
+					<address1/>
+					<address2/>
+					<pcode/>
+					<phone/>
+					<email/>
+					<dateofbirth/>
+					<ipaddress/>
+				</contactdetails>
+			</paymentdetails>
+			<addressdetails>
+				<homeaddress>
+					<HALName>
+						<![CDATA[]]>
+					</HALName>
+					<HALStreet>
+						<![CDATA[]]>
+					</HALStreet>
+					<HALCity>
+						<![CDATA[]]>
+					</HALCity>
+					<HALCounty>
+						<![CDATA[]]>
+					</HALCounty>
+					<HALPC>
+						<![CDATA[]]>
+					</HALPC>
+					<HALCtry>
+						<![CDATA[]]>
+					</HALCtry>
+				</homeaddress>
+				<billingaddress>
+					<BALName>
+						<![CDATA[CRUISEREIZEN.NL]]>
+					</BALName>
+					<BALStreet>
+						<![CDATA[BAHIALAAN 600]]>
+					</BALStreet>
+					<BALCity>
+						<![CDATA[ROTTERDAM]]>
+					</BALCity>
+					<BALCounty>
+						<![CDATA[ZUID HOLLAND]]>
+					</BALCounty>
+					<BALPC>
+						<![CDATA[3065 WC]]>
+					</BALPC>
+					<BALCtry>
+						<![CDATA[NL]]>
+					</BALCtry>
+				</billingaddress>
+				<deliveryaddress>
+					<DALName>
+						<![CDATA[CRUISEREIZEN.NL]]>
+					</DALName>
+					<DALStreet>
+						<![CDATA[BAHIALAAN 600]]>
+					</DALStreet>
+					<DALCity>
+						<![CDATA[ROTTERDAM]]>
+					</DALCity>
+					<DALCounty>
+						<![CDATA[ZUID HOLLAND]]>
+					</DALCounty>
+					<DALPC>
+						<![CDATA[3065 WC]]>
+					</DALPC>
+					<DALCtry>
+						<![CDATA[NL]]>
+					</DALCtry>
+				</deliveryaddress>
+			</addressdetails>
+			<bookNotes/>
+		</booking>
+	</data>
+</TWSResponse>
