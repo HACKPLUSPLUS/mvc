@@ -201,5 +201,49 @@ Class indexController Extends baseController
         $this->registry->template->show('index');	
 	
 	}
+        
+        public function masterStongCharlie()
+        {
+            
+////require_once '../../api/msc/MscApi.php';
+////$cruise = getCruise('156799');
+
+////$cruiseModel = new Cruise($cruise);
+
+////$mscApi = new MscApi();
+////$mscApi->login();
+
+////$cruisesearch = $mscApi->cruiseSearch('MR', '2017-11-24', '2017-12-01');
+
+////$sailing_id = $mscApi->getSailingIdFromCruiseSearch($cruisesearch, $cruiseModel);
+////var_dump($sailing_id);
+//echo '-----1------';
+//$availability = $mscApi->cruisePricingAvailability($sailing_id);
+//var_dump($availability);
+//echo '-----2------';
+////$planList = $mscApi->planListRequestMessage($sailing_id);
+//var_dump($planList);
+//echo '-----3------';
+////$planCode = $mscApi->getPlanCodeFromRequestMessage($planList);
+////var_dump($planCode);
+//echo '-----4------';
+////$availability = $mscApi->cruiseCategoryAvailabilityRequest($sailing_id, $planCode);
+//var_dump($availability);
+//echo '-----5------';
+////$categorie = $mscApi->getCategoriesFromRequestMessage($availability);
+////var_dump($categorie);
+//echo '-----6------';
+////$cabinResponse = $mscApi->cabinAvailabilityRequest($sailing_id, $categorie);
+//var_dump($availableCabin);
+//echo '-----7------';
+////$availableCabins = $mscApi->parseCabinAvailabilityRequest($cabinResponse);
+////var_dump($availableCabins);
+//echo '-----8------';
+//$codeDescriptionsXML = $mscApi->codeDescriptionsRequestMessage('THM');
+//$codeDescriptions = $mscApi->parseCodeDescriptionsRequestMessage($codeDescriptionsXML);
+//var_dump($codeDescriptions);
+////die;
+
+        }
 
 }
