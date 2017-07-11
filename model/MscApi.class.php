@@ -9,6 +9,9 @@ class MscApi
 
     public $client = false;
     public $handShake;
+    private $agencyId = 'NL005138';
+    private $agentId = 'B2B2C-NL005138';
+    private $agentPassword = 'msc123!';
 
     public function __construct()
     {
@@ -20,27 +23,10 @@ class MscApi
                     "exception" => 1
                 ]
             );
-            $this->client->__setLocation('https://wsrv.msccruises.com/upp/proxy/push/9ed867470315c6c3');
+            $this->client->__setLocation(self::MSC_TEST_ADDRESS);
         } catch (SoapFault $fault) {
             error_log("SOAP Fault: (faultcode: {$fault->faultcode}, faultstring: {$fault->faultstring})", E_USER_ERROR);
         }
-    }
-
-    public function login()
-    {
-        $loginXml = <<<EOF
-<DtsAgencyLoginMessage>
-    <LoginInfo>
-        <AgencyID>NL005138</AgencyID>
-        <AgentID>B2B2C-NL005138</AgentID>
-        <AgentPassword>msc123!</AgentPassword>
-    </LoginInfo>
-</DtsAgencyLoginMessage>
-EOF;
-        error_log($loginXml);
-
-        $handShakeXml = $this->xmlRequest($loginXml);
-        $this->handShake = $handShakeXml['SessionInfo']['SessionID'];
     }
 
     private function xmlRequest($xml)
@@ -92,6 +78,22 @@ EOF;
 
             return $return_array;
         }
+    }
+
+    public function login()
+    {
+        $xml = <<<EOF
+<DtsAgencyLoginMessage>
+    <LoginInfo>
+        <AgencyID>{$this->agencyId}</AgencyID>
+        <AgentID>{$this->agentId}</AgentID>
+        <AgentPassword>{$this->agentPassword}</AgentPassword>
+    </LoginInfo>
+</DtsAgencyLoginMessage>
+EOF;
+
+        $handShakeXml = $this->xmlRequest($xml);
+        $this->handShake = $handShakeXml['SessionInfo']['SessionID'];
     }
 
     public function cruiseSearch($cruiseShipCode, $cruiseDepartureDate, $cruiseArrivalDate)
@@ -224,7 +226,7 @@ EOF;
 
         return $this->xmlRequest($cabinAvailabilityRequestXml);
     }
-    
+
     public function codeDescriptionsRequestMessage($codeType)
     {
         $codeDescriptionsRequestMessageXml = <<<EOF
@@ -238,12 +240,12 @@ EOF;
     <RequestedTypes>
         <CodeType>{$codeType}</CodeType>
     </RequestedTypes>
-</DtsCodeDescriptionsRequestMessage>                
+</DtsCodeDescriptionsRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($codeDescriptionsRequestMessageXml);
     }
-    
+
     public function specialServiceShopRequestMessage()
     {
         $specialServiceShopRequestMessageXml = <<<EOF
@@ -263,7 +265,7 @@ EOF;
         <NoChildren>2</NoChildren>
         <ChildInfo>
             <ChildAge>10,12</ChildAge>
-        </ChildInfo> 
+        </ChildInfo>
     </PricingShopInfo>
     <!-- SSV - SPECIAL SERVICE -->
     <SpecialServiceShop>
@@ -271,14 +273,14 @@ EOF;
         <DeliveryDate>2017-11-24</DeliveryDate>
         <CruiseComponentID>Z316764</CruiseComponentID>
     </SpecialServiceShop>
-    <!-- ASSOCIATED ITEMS -->               
+    <!-- ASSOCIATED ITEMS -->
     <AssociatedItemShop>
         <AssociatedWithComponentID>Z316764</AssociatedWithComponentID>
     </AssociatedItemShop>
-</DtsShopRequestMessage>                
+</DtsShopRequestMessage>
 EOF;
     }
-    
+
     public function retrieveBookingRequestMessage($bookingNo)
     {
         $retrieveBookingRequestMessageXml = <<<EOF
@@ -299,12 +301,12 @@ EOF;
         <MarketCode>NLD</MarketCode>
         <BookingNo>{$bookingNo}</BookingNo>
     </BookingContext>
-</DtsRetrieveBookingRequestMessage>                
+</DtsRetrieveBookingRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($retrieveBookingRequestMessageXml);
     }
-    
+
     public function priceToBookRequestMessage($componentId, $categoryCode)
     {
         $priceToBookRequestMessageXml = <<<EOF
@@ -321,16 +323,16 @@ EOF;
     </BookingContext>
     <ComponentsToPrice>
         <ComponentDetails>
-            <ComponentID>{$componentId}</ComponentID> 
+            <ComponentID>{$componentId}</ComponentID>
             <CategoryCode>{$categoryCode}</CategoryCode>
         </ComponentDetails>
     </ComponentsToPrice>
-</DtsPriceToBookRequestMessage>                
+</DtsPriceToBookRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($priceToBookRequestMessageXml);
     }
-    
+
     public function bookRequestMessage($componentId, $categoryCode, $cabinNo, $obs)
     {
         $bookRequestMessageXml = <<<EOF
@@ -368,20 +370,20 @@ EOF;
     </ParticipantList>
     <ComponentsToBook>
         <ComponentDetails>
-            <ComponentID>{$componentId}</ComponentID> 
+            <ComponentID>{$componentId}</ComponentID>
             <CategoryCode>{$categoryCode}</CategoryCode>
             <CabinNo>{$cabinNo}</CabinNo>
         </ComponentDetails>
         <ComponentDetails>
-            <ComponentID>{$obs}</ComponentID> 
+            <ComponentID>{$obs}</ComponentID>
         </ComponentDetails>
     </ComponentsToBook>
-</DtsBookRequestMessage>                
+</DtsBookRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($bookRequestMessageXml);
     }
-    
+
     public function confirmQuoteRequestMessage()
     {
         $confirmQuoteMessageXml = <<<EOF
@@ -397,12 +399,12 @@ EOF;
         <BookingContactName>CRUREI TEST</BookingContactName>
         <BookingNo>7158475</BookingNo>
 	</BookingContext>
-</DtsConfirmQuoteRequestMessage>                
+</DtsConfirmQuoteRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($confirmQuoteMessageXml);
     }
-    
+
     public function confirmBookingRequestMessage()
     {
         $confirmBookingMessageXml = <<<EOF
@@ -425,10 +427,10 @@ EOF;
     </BookingContext>
 </DtsConfirmBookingRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($confirmBookingMessageXml);
     }
-    
+
     public function categoryItemRequestMessage($componentId, $categoryCode, $dynamicPriceCode)
     {
         $categoryItemRequestMessageXml = <<<EOF
@@ -437,7 +439,7 @@ EOF;
         <Profile>A</Profile>
         <Language>NLD</Language>
         <Version>1.0</Version>
-        <SessionID>{$this->handShake}</SessionID> 
+        <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
         <BookingContactName>CRUREI TEST</BookingContactName>
@@ -445,19 +447,19 @@ EOF;
     </BookingContext>
     <CruiseComponent>
         <ComponentID>{$componentId}</ComponentID>
-        <CategoryCode>{$categoryCode}</CategoryCode> 
+        <CategoryCode>{$categoryCode}</CategoryCode>
         <DynamicPriceCode>{$dynamicPriceCode}</DynamicPriceCode>
     </CruiseComponent>
 </DtsCategoryItemRequestMessage>
 EOF;
-        
+
         return $this->xmlRequest($categoryItemRequestMessageXml);
     }
 
     public function getSailingIdFromCruiseSearch($shipCode, $departureDate, $arrivalDate)
     {
         $cruiseSearch = $this->cruiseSearch($shipCode, $departureDate, $arrivalDate);
-        
+
         $aantal_cruises = count($cruiseSearch['CruiseProducts']['CruiseSailing']);
 
         if ($aantal_cruises <= 1) {
@@ -472,21 +474,21 @@ EOF;
             }
         }
     }
-    
+
     public function getPlanCodeFromRequestMessage($sailingId)
     {
         $planListRequestXml = $this->planListRequestMessage($sailingId);
-        
+
         return $planListRequestXml['PlanCodes'][1]['PlanCode'];
     }
-    
+
     public function getCategoriesFromRequestMessage($sailingId, $planCode)
     {
         $availability = $this->cruiseCategoryAvailabilityRequest($sailingId, $planCode);
-        
+
         return $availability['AvailableCategories']['AvailableCategory'][0]['CategoryCode'];
     }
-    
+
     public function parseCabinAvailabilityRequest($xml)
     {
         if (is_array($xml["AvailableCabins"]["AvailableCabin"])) {
@@ -494,22 +496,22 @@ EOF;
             foreach ($xml["AvailableCabins"]["AvailableCabin"] as $cabin) {
                 array_push($roomNumbers, $cabin["CabinNo"]);
             }
-            
+
             return $roomNumbers;
         }
-        
+
         return [$xml["AvailableCabins"]["AvailableCabin"]["CabinNo"]];
     }
-    
+
     public function parseCodeDescriptionsRequestMessage($xml)
     {
         if (empty($xml['AdvisoryInfo'])) {
             return $xml['CodeDescriptions']['CodeDetail'][0]['CodeDescription'];
         }
-        
+
         return false;
     }
-    
+
     public function parseCategoryItemRequestMessage($xml)
     {
         return $xml["ComponentDetails"]["ItemDetails"]["ComponentID"];
