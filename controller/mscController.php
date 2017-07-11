@@ -14,7 +14,7 @@ class mscController Extends baseController
         $departureDate = '2017-12-15';
         $arrivalDate = '2017-12-22';
         
-        $sailingId = $mscApi->getSailingIdFromCruiseSearch($shipCode, $departureDate, $arrivalDate);
+        $sailingId = $mscApi->getSailingIdFromCruiseSearch(2, 0, $shipCode, $departureDate, $arrivalDate);
         
         echo '<pre>';
         var_dump($sailingId);
@@ -37,7 +37,7 @@ class mscController Extends baseController
         $priceToBook = $mscApi->priceToBookRequestMessage($sailingId, $categoryCode);
         var_dump($priceToBook);
         
-        $bookingXml = $mscApi->bookRequestMessage($sailingId, $categoryCode, $cabinNo, $obs);
+        $bookingXml = $mscApi->bookRequestMessage(Q, $sailingId, $categoryCode, $cabinNo, $obs);
         die(var_dump($bookingXml));*/
     }
 }

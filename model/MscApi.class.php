@@ -12,6 +12,9 @@ class MscApi
     private $agencyId = 'NL005138';
     private $agentId = 'B2B2C-NL005138';
     private $agentPassword = 'msc123!';
+    private $bookingContactName = 'CRUREI TEST';
+    private $language = 'NLD';
+    private $version = '1.0';
 
     public function __construct()
     {
@@ -96,24 +99,24 @@ EOF;
         $this->handShake = $handShakeXml['SessionInfo']['SessionID'];
     }
 
-    public function cruiseSearch($cruiseShipCode, $cruiseDepartureDate, $cruiseArrivalDate)
+    public function cruiseSearch($noAdults, $noChildren, $cruiseShipCode, $cruiseDepartureDate, $cruiseArrivalDate)
     {
-        $cruisesearchXml = <<<EOF
+        $xml = <<<EOF
 <DtsShopRequestMessage>
     <SessionInfo>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
         <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
         <BookingCurrencyCode>EUR</BookingCurrencyCode>
     </BookingContext>
     <PricingShopInfo>
-        <NoAdults>2</NoAdults>
-        <NoChildren>0</NoChildren>
+        <NoAdults>{$noAdults}</NoAdults>
+        <NoChildren>{$noChildren}</NoChildren>
         <ChildInfo>
             <ChildAge></ChildAge>
         </ChildInfo>
@@ -126,23 +129,21 @@ EOF;
 </DtsShopRequestMessage>
 EOF;
 
-        error_log($cruisesearchXml);
-
-        return $this->xmlRequest($cruisesearchXml);
+        return $this->xmlRequest($xml);
     }
 
     public function cruisePricingAvailability($componentId)
     {
-        $cruisePricingAvailabilityXml = <<<EOF
+        $xml = <<<EOF
 <DtsCruisePricingAvailabilityRequest>
     <SessionInfo>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
         <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
         <BookingCurrencyCode>EUR</BookingCurrencyCode>
     </BookingContext>
@@ -151,45 +152,43 @@ EOF;
     </CruiseComponent>
 </DtsCruisePricingAvailabilityRequest>
 EOF;
-        error_log($cruisePricingAvailabilityXml);
 
-        return $this->xmlRequest($cruisePricingAvailabilityXml);
+        return $this->xmlRequest($xml);
     }
 
     public function planListRequestMessage($componentId)
     {
-        $planListRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsPlanListRequestMessage>
     <SessionInfo>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
         <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <ComponentID>{$componentId}</ComponentID>
 </DtsPlanListRequestMessage>
 EOF;
-        error_log($planListRequestMessageXml);
 
-        return $this->xmlRequest($planListRequestMessageXml);
+        return $this->xmlRequest($xml);
     }
 
     public function cruiseCategoryAvailabilityRequest($componentId, $promotionCode)
     {
-        $cruiseCategoryAvailabilityRequestXml = <<<EOF
+        $xml = <<<EOF
 <DtsCruiseCategoryAvailabilityRequest>
     <SessionInfo>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
         <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <CruiseComponent>
@@ -198,23 +197,22 @@ EOF;
     </CruiseComponent>
 </DtsCruiseCategoryAvailabilityRequest>
 EOF;
-        error_log($cruiseCategoryAvailabilityRequestXml);
 
-        return $this->xmlRequest($cruiseCategoryAvailabilityRequestXml);
+        return $this->xmlRequest($xml);
     }
 
     public function cabinAvailabilityRequest($componentId, $categoryCode)
     {
-        $cabinAvailabilityRequestXml = <<<EOF
+        $xml = <<<EOF
 <DtsCruiseCabinAvailabilityRequest>
     <SessionInfo>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
         <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <CruiseComponent>
@@ -224,18 +222,18 @@ EOF;
 </DtsCruiseCabinAvailabilityRequest>
 EOF;
 
-        return $this->xmlRequest($cabinAvailabilityRequestXml);
+        return $this->xmlRequest($xml);
     }
 
     public function codeDescriptionsRequestMessage($codeType)
     {
-        $codeDescriptionsRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsCodeDescriptionsRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <RequestedTypes>
         <CodeType>{$codeType}</CodeType>
@@ -243,21 +241,21 @@ EOF;
 </DtsCodeDescriptionsRequestMessage>
 EOF;
 
-        return $this->xmlRequest($codeDescriptionsRequestMessageXml);
+        return $this->xmlRequest($xml);
     }
 
     public function specialServiceShopRequestMessage()
     {
-        $specialServiceShopRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsShopRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>ENG</Language>
-        <Version>1</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <PricingShopInfo>
@@ -279,22 +277,24 @@ EOF;
     </AssociatedItemShop>
 </DtsShopRequestMessage>
 EOF;
+        
+        return $this->xmlRequest($xml);
     }
 
     public function retrieveBookingRequestMessage($bookingNo)
     {
-        $retrieveBookingRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsRetrieveBookingRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>NLD</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <BookingContext>
-        <AgencyID>NL005138</AgencyID>
-        <AgentID>B2B2C-NL005138</AgentID>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <AgencyID>{$this->agencyId}</AgencyID>
+        <AgentID>{$this->agentId}</AgentID>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <BookingCurrencyCode>EUR</BookingCurrencyCode>
         <LanguageCode>NLD</LanguageCode>
         <OfficeCode>NLD</OfficeCode>
@@ -304,21 +304,21 @@ EOF;
 </DtsRetrieveBookingRequestMessage>
 EOF;
 
-        return $this->xmlRequest($retrieveBookingRequestMessageXml);
+        return $this->xmlRequest($xml);
     }
 
     public function priceToBookRequestMessage($componentId, $categoryCode)
     {
-        $priceToBookRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsPriceToBookRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>NLD</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <ComponentsToPrice>
@@ -330,24 +330,24 @@ EOF;
 </DtsPriceToBookRequestMessage>
 EOF;
 
-        return $this->xmlRequest($priceToBookRequestMessageXml);
+        return $this->xmlRequest($xml);
     }
 
-    public function bookRequestMessage($componentId, $categoryCode, $cabinNo, $obs)
+    public function bookRequestMessage($bookOrQuote, $componentId, $categoryCode, $cabinNo, $obs)
     {
-        $bookRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsBookRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>NLD</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <BookingAction>
-        <BookOrQuote>Q</BookOrQuote>
+        <BookOrQuote>{$bookOrQuote}</BookOrQuote>
     </BookingAction>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <ParticipantList>
@@ -381,68 +381,68 @@ EOF;
 </DtsBookRequestMessage>
 EOF;
 
-        return $this->xmlRequest($bookRequestMessageXml);
+        return $this->xmlRequest($xml);
     }
 
-    public function confirmQuoteRequestMessage()
+    public function confirmQuoteRequestMessage($bookingNo)
     {
-        $confirmQuoteMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsConfirmQuoteRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>NLD</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <BookingContext>
-        <AgencyID>YYYYYYYY</AgencyID>
-        <BookingContactName>CRUREI TEST</BookingContactName>
-        <BookingNo>7158475</BookingNo>
+        <AgencyID>{$this->agencyId}</AgencyID>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
+        <BookingNo>{$bookingNo}</BookingNo>
 	</BookingContext>
 </DtsConfirmQuoteRequestMessage>
 EOF;
 
-        return $this->xmlRequest($confirmQuoteMessageXml);
+        return $this->xmlRequest($xml);
     }
 
-    public function confirmBookingRequestMessage()
+    public function confirmBookingRequestMessage($bookingNo)
     {
-        $confirmBookingMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsConfirmBookingRequestMessage>
     <SessionInfo>
         <SessionID>{$this->handShake}</SessionID>
         <Profile>A</Profile>
-        <Language>NLD</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
     </SessionInfo>
     <BookingContext>
-        <AgencyID>XXXXXXXX</AgencyID>
-        <AgentID>YYYYYYYY</AgentID>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <AgencyID>{$this->agencyId}</AgencyID>
+        <AgentID>{$this->agentId}</AgentID>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <BookingCurrencyCode>EUR</BookingCurrencyCode>
-        <LanguageCode>ITA</LanguageCode>
-        <OfficeCode>ITA</OfficeCode>
-        <MarketCode>ITA</MarketCode>
-        <BookingNo>7158475</BookingNo>
+        <LanguageCode>NLD</LanguageCode>
+        <OfficeCode>NLD</OfficeCode>
+        <MarketCode>NLD</MarketCode>
+        <BookingNo>{$bookingNo}</BookingNo>
     </BookingContext>
 </DtsConfirmBookingRequestMessage>
 EOF;
 
-        return $this->xmlRequest($confirmBookingMessageXml);
+        return $this->xmlRequest($xml);
     }
 
     public function categoryItemRequestMessage($componentId, $categoryCode, $dynamicPriceCode)
     {
-        $categoryItemRequestMessageXml = <<<EOF
+        $xml = <<<EOF
 <DtsCategoryItemRequestMessage>
     <SessionInfo>
         <Profile>A</Profile>
-        <Language>NLD</Language>
-        <Version>1.0</Version>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
         <SessionID>{$this->handShake}</SessionID>
     </SessionInfo>
     <BookingContext>
-        <BookingContactName>CRUREI TEST</BookingContactName>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <CruiseComponent>
@@ -453,12 +453,12 @@ EOF;
 </DtsCategoryItemRequestMessage>
 EOF;
 
-        return $this->xmlRequest($categoryItemRequestMessageXml);
+        return $this->xmlRequest($xml);
     }
 
-    public function getSailingIdFromCruiseSearch($shipCode, $departureDate, $arrivalDate)
+    public function getSailingIdFromCruiseSearch($numAdults, $noChildren, $shipCode, $departureDate, $arrivalDate)
     {
-        $cruiseSearch = $this->cruiseSearch($shipCode, $departureDate, $arrivalDate);
+        $cruiseSearch = $this->cruiseSearch($numAdults, $noChildren, $shipCode, $departureDate, $arrivalDate);
 
         $aantal_cruises = count($cruiseSearch['CruiseProducts']['CruiseSailing']);
 
