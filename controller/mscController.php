@@ -7,7 +7,7 @@ class mscController Extends baseController
         $mscApi = new MscApi();
         $mscApi->login();
         
-        $getBooking = $mscApi->retrieveBookingRequestMessage('26798485');
+        $getBooking = $mscApi->retrieveBookingRequestMessage('26800155'); //26800155 //26798485
         var_dump($getBooking);
         
         /*$shipCode = 'MR';
@@ -28,7 +28,7 @@ class mscController Extends baseController
         var_dump($categoryCode);
         
         $cabinNoRequest = $mscApi->cabinAvailabilityRequest($sailingId, $categoryCode);
-        $cabinNo = $cabinNoRequest["AvailableCabins"]["AvailableCabin"][0]["CabinNo"];
+        $cabinNo = $cabinNoRequest["AvailableCabins"]["AvailableCabin"]["CabinNo"];
         
         $categoryCode2 = $mscApi->categoryItemRequestMessage($sailingId, $categoryCode, $planCode); 
         
@@ -37,7 +37,7 @@ class mscController Extends baseController
         $priceToBook = $mscApi->priceToBookRequestMessage($sailingId, $categoryCode);
         var_dump($priceToBook);
         
-        $bookingXml = $mscApi->bookRequestMessage(Q, $sailingId, $categoryCode, $cabinNo, $obs);
+        $bookingXml = $mscApi->bookRequestMessage('Q', $sailingId, $categoryCode, $cabinNo, $obs);
         die(var_dump($bookingXml));*/
     }
 }

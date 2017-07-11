@@ -15,6 +15,7 @@ class MscApi
     private $bookingContactName = 'CRUREI TEST';
     private $language = 'NLD';
     private $version = '1.0';
+    private $participants;
 
     public function __construct()
     {
@@ -335,6 +336,14 @@ EOF;
 
     public function bookRequestMessage($bookOrQuote, $componentId, $categoryCode, $cabinNo, $obs)
     {
+        
+        $participants = [
+            [1, 'Text', 'Mister', 'Test', 'A', 'M'],
+            [2, 'Text', 'Madam', 'Test', 'A', 'F']
+        ];
+        
+        $this->setParticipantData($participants);
+        
         $xml = <<<EOF
 <DtsBookRequestMessage>
     <SessionInfo>
@@ -351,22 +360,7 @@ EOF;
         <OfficeCode>NLD</OfficeCode>
     </BookingContext>
     <ParticipantList>
-        <ParticipantData>
-            <PersonNo>1</PersonNo>
-            <PassengerNo>Text</PassengerNo>
-            <LastName>Test</LastName>
-            <FirstName>Test</FirstName>
-            <PersonType>A</PersonType>
-            <Gender>M</Gender>
-        </ParticipantData>
-        <ParticipantData>
-            <PersonNo>2</PersonNo>
-            <PassengerNo>Text</PassengerNo>
-            <LastName>Test</LastName>
-            <FirstName>Test</FirstName>
-            <PersonType>A</PersonType>
-            <Gender>F</Gender>
-        </ParticipantData>
+        {$this->participants}
     </ParticipantList>
     <ComponentsToBook>
         <ComponentDetails>
@@ -382,6 +376,27 @@ EOF;
 EOF;
 
         return $this->xmlRequest($xml);
+    }
+    
+    private function setParticipantData($participants)
+    {
+        $this->participants = '';
+        $xml = '';
+        
+        foreach ($participants as $participant) {
+            $xml .= <<<EOF
+<ParticipantData>
+    <PersonNo>{$participant[0]}</PersonNo>
+    <PassengerNo>{$participant[1]}</PassengerNo>
+    <LastName>{$participant[2]}</LastName>
+    <FirstName>{$participant[3]}</FirstName>
+    <PersonType>{$participant[4]}</PersonType>
+    <Gender>{$participant[5]}</Gender>
+</ParticipantData>
+EOF;
+        }
+        
+        $this->participants = $xml;
     }
 
     public function confirmQuoteRequestMessage($bookingNo)
