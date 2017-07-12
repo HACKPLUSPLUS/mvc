@@ -224,11 +224,11 @@ EOF;
 
         return $xml;
     }
-    
+
     private function getGuestXmlBooking($guests)
     {
         $xml = '';
-        
+
         foreach ($guests as $key => $guest) {
             $count = $key + 1;
             $xml .= '<Guest ActionCode="N" SeqNumber="' . $count . '">';
@@ -300,13 +300,69 @@ EOF;
         $response = curl_exec($this->client);
 	$err = curl_error($this->client);
 
-	//curl_close($this->client);
-
 	if ($err) {
 	  return $err;
 	} else {
 	  return simplexml_load_string($response);
 	}
+    }
+
+    public function getSailingIdsFromCruiseSearch($xml)
+    {
+        $sailingIds = [];
+        if (isset($xml->ProductAvailabilityResponse)) {
+            foreach ($xml->ProductAvailabilityResponse as $cruise) {
+                array_push($sailingIds, $cruise->SailingId);
+            }
+        }
+
+        return $sailingIds;
+    }
+
+    public function getRateCodesFromRateAvailabilityRequest($xml)
+    {
+        $rateCodes = [];
+        if (isset($xml->RateAvailabilityResponse->RateCodeInformation)) {
+            foreach ($xml->RateAvailabilityResponse->RateCodeInformation as $rateCode) {
+                array_push($rateCodes, trim($rateCode->Rate['Code']));
+            }
+        }
+
+        return $rateCodes;
+    }
+
+    public function getAvailableCategoriesFromRequest($xml)
+    {
+        $availableCategories = [];
+        if (isset($xml->CategoryAvailabilityResponse->Category)) {
+            foreach ($xml->CategoryAvailabilityResponse->Category as $categoryCode) {
+                if ((string)$categoryCode->Status['Code'] === 'AV') {
+                    array_push($availableCategories, trim($categoryCode['Code']));
+                }
+            }
+        }
+
+        return $availableCategories;
+    }
+    
+    public function getAvailableCategoryObjectsFromRequest($xml)
+    {
+        $availableCategoryObjects = [];
+        if (isset($xml->CategoryAvailabilityResponse->Category)) {
+            foreach ($xml->CategoryAvailabilityResponse->Category as $categoryCode) {
+                if ((string)$categoryCode->Status['Code'] === 'AV') {
+                    $category = new stdClass;
+                    $category->code = trim($categoryCode['Code']);
+                    $category->statusCode = trim($categoryCode->Status['Code']);
+                    $category->deckCode = $categoryCode->Deck['Code'];
+                    $category->pricePp = (float)$categoryCode->GuestType->Transportation['Amount'];
+                    $category->taxPp = (float)$categoryCode->GuestType->Transportation['TaxFeeAmount'];
+                    array_push($availableCategoryObjects, $category);
+                }
+            }
+        }
+
+        return $availableCategoryObjects;
     }
 
     public function __destruct() {

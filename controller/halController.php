@@ -17,22 +17,14 @@ class halController Extends baseController
         
         //var_dump($cruisesearch);
         
-        $aantal_cruises = count($cruisesearch->ProductAvailabilityResponse);
+        $sailingIds = $halApi->getSailingIdsFromCruiseSearch($cruisesearch);
         
-        //var_dump($aantal_cruises);
-        
-        if ($aantal_cruises == 1) {
-            $sailing_id = $cruisesearch->ProductAvailabilityResponse->SailingId;
-        } elseif($aantal_cruises > 1) {
-            $sailing_id = $cruisesearch->ProductAvailabilityResponse[0]->SailingId;
-        }
-        
-        //var_dump($sailing_id);
+        //var_dump($sailingIds[0]);
         
         $cabinType = 'Binnenhut';
         
-        $rate_xml = $halApi->rateAvailabilityRequest(
-                                $sailing_id,
+        $rateXml = $halApi->rateAvailabilityRequest(
+                                $sailingIds[0],
                                 '07222018',
                                 '7',
                                 'KO',
@@ -41,11 +33,7 @@ class halController Extends baseController
                                 0
                             );
         
-        $rate_ignore = [];
-        $rate_ignore[] = "BNN";
-        $rate_ignore[] = "NNN";
-        $rate_ignore[] = "BNP";
-        $rate_ignore[] = "NNP";
+        
 
         $rate_direct_full_pay = [];
         $rate_direct_full_pay[] = "FLL";
@@ -54,61 +42,62 @@ class halController Extends baseController
         $rate_direct_full_pay[] = "FJL";
         $rate_direct_full_pay[] = "FJK";
         
-        //var_dump($rate_xml);
+        var_dump($rateXml);
         
-        $aantal_rates = count($rate_xml->RateAvailabilityResponse->RateCodeInformation);
+        $rateCodes = $halApi->getRateCodesFromRateAvailabilityRequest($rateXml);
         
-        //var_dump($aantal_rates);
+        var_dump($rateCodes);
         
-        if ($aantal_rates == 1) {
-            $rate_code = (string) $rate_xml->RateAvailabilityResponse->RateCodeInformation->Rate['Code'];
-        } elseif ($aantal_rates > 1) {
-            $rate_code = (string) $rate_xml->RateAvailabilityResponse->RateCodeInformation[0]->Rate['Code'];
-        }
-        $rate_code = trim($rate_code);
+        $ignoreRates = ['BNN', 'NNN', 'BNP', 'NNP'];
+
+        $usableRateCodes = array_values(array_diff($rateCodes, $ignoreRates));
         
-        if (in_array($rate_code, $rate_ignore)) {
-            $rate_code = "FIT";
-        }
-        //var_dump($rate_code);
-        
-        $categories_xml = $halApi->categoryAvailabilityRequest(
-                            $sailing_id,
+        var_dump($usableRateCodes);
+
+        $availableCategoriesXml = $halApi->categoryAvailabilityRequest(
+                            $sailingIds[0],
                             '07222018',
                             '7',
                             'KO',
-                            'FIT',
+                            $usableRateCodes[1],
                             2,
                             2,
                             0,
                             0
                         );
         
-        //var_dump($categories_xml);
+        var_dump($availableCategoriesXml);
         
-        $aantal_cats = count($categories_xml->CategoryAvailabilityResponse->Category);
+        $availableCategories = $halApi->getAvailableCategoriesFromRequest($availableCategoriesXml);
         
-        //var_dump($aantal_cats);
+        var_dump($availableCategories);
         
-        for ($j = 0; $j < $aantal_cats; $j++) {
-            $cat_cabin_status = $categories_xml->CategoryAvailabilityResponse->Category[$j]->Status['Code'];
+        $availableCategoryObjects = $halApi->getAvailableCategoryObjectsFromRequest($availableCategoriesXml);
+        
+        
+        var_dump($availableCategoryObjects);
+        
+        die();
+        for ($j = 0; $j < $availableCategories; $j++) {
+            $halApi->getAvailableCategoriesFromRequest();
+            /*$cat_cabin_status = $availableCategoriesXml->CategoryAvailabilityResponse->Category[$j]->Status['Code'];
             var_dump($cat_cabin_status);
-            $cat_code = (string) $categories_xml->CategoryAvailabilityResponse->Category[$j]['Code'];
+            $cat_code = (string) $availableCategoriesXml->CategoryAvailabilityResponse->Category[$j]['Code'];
             var_dump($cat_code);
-            $dek = (int) $categories_xml->CategoryAvailabilityResponse->Category[$j]->Deck['Code'];
+            $dek = (int) $availableCategoriesXml->CategoryAvailabilityResponse->Category[$j]->Deck['Code'];
             var_dump($dek);
-            $prijspp = ($categories_xml->CategoryAvailabilityResponse->Category[$j]->GuestType->Transportation['Amount']);
+            $prijspp = ($availableCategoriesXml->CategoryAvailabilityResponse->Category[$j]->GuestType->Transportation['Amount']);
             var_dump($prijspp);
-            $taxpp = (float) ($categories_xml->CategoryAvailabilityResponse->Category[$j]->GuestType->Transportation['TaxFeeAmount']);
+            $taxpp = (float) ($availableCategoriesXml->CategoryAvailabilityResponse->Category[$j]->GuestType->Transportation['TaxFeeAmount']);
             var_dump($taxpp);
             $dek_arr[] = $dek;
 
             $invoice_xml = $halApi->invoicePricingRequest(
-                $sailing_id,
+                $sailingIds[0],
                 '07222018',
                 '7',
                 'KO',
-                'FIT',
+                $usableRateCodes[1],
                 $cat_code,
                 2,
                 0,
@@ -130,8 +119,10 @@ class halController Extends baseController
                 $hut_totaalprijs = (float) $invoice_xml->InvoicePricingResponse->AgentInvoiceItem['Amount'];
             }
             
-            var_dump($hut_totaalprijs);
+            var_dump($hut_totaalprijs);*/
         }
+        
+        die();
         
         $dining_xml = $halApi->diningAvailabilityRequest($sailing_id, 2, "CCDINAV1");
         
