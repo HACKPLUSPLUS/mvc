@@ -36,8 +36,13 @@ class mscController Extends baseController
         var_dump($obs);
         $priceToBook = $mscApi->priceToBookRequestMessage($sailingId, $categoryCode);
         var_dump($priceToBook);
+         
+        $participants = [
+            [1, 'Text', 'Mister', 'Test', 'A', 'M'],
+            [2, 'Text', 'Madam', 'Test', 'A', 'F']
+        ];
         
-        $bookingXml = $mscApi->bookRequestMessage('Q', $sailingId, $categoryCode, $cabinNo, $obs);
+        $bookingXml = $mscApi->bookRequestMessage($participants, 'Q', $sailingId, $categoryCode, $cabinNo, $obs);
         die(var_dump($bookingXml));*/
     }
 }

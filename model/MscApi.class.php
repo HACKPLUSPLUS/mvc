@@ -15,6 +15,8 @@ class MscApi
     private $bookingContactName = 'CRUREI TEST';
     private $language = 'NLD';
     private $version = '1.0';
+    private $officeCode = 'NLD';
+    private $bookingCurrencyCode = 'EUR';
     private $participants;
 
     public function __construct()
@@ -112,8 +114,8 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
-        <BookingCurrencyCode>EUR</BookingCurrencyCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
+        <BookingCurrencyCode>{$this->bookingCurrencyCode}</BookingCurrencyCode>
     </BookingContext>
     <PricingShopInfo>
         <NoAdults>{$noAdults}</NoAdults>
@@ -145,8 +147,8 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
-        <BookingCurrencyCode>EUR</BookingCurrencyCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
+        <BookingCurrencyCode>{$this->bookingCurrencyCode}</BookingCurrencyCode>
     </BookingContext>
     <CruiseComponent>
         <ComponentID>{$componentId}</ComponentID>
@@ -169,7 +171,7 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <ComponentID>{$componentId}</ComponentID>
 </DtsPlanListRequestMessage>
@@ -190,7 +192,7 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <CruiseComponent>
         <ComponentID>{$componentId}</ComponentID>
@@ -214,7 +216,7 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <CruiseComponent>
         <ComponentID>{$componentId}</ComponentID>
@@ -257,7 +259,7 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <PricingShopInfo>
         <NoAdults>2</NoAdults>
@@ -281,6 +283,56 @@ EOF;
         
         return $this->xmlRequest($xml);
     }
+    
+    public function insuranceShopRequest($noAdults)
+    {
+        $xml = <<<EOF
+<DtsShopRequestMessage>
+    <SessionInfo>
+        <SessionID>{$this->handShake}</SessionID>
+        <Profile>A</Profile>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
+    </SessionInfo>
+    <BookingContext>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
+    </BookingContext>
+    <PricingShopInfo>
+        <NoAdults>{$noAdults}</NoAdults>
+    </PricingShopInfo>
+    <!-- INS -->
+    <InsuranceShop>
+        <!-- CRU -->                 
+        <CoveredItemsInfo>
+            <ItemComponentID>Z41019</ItemComponentID> 
+        </CoveredItemsInfo>
+        <!-- OBS M "APREDA person/stay" -->                
+        <CoveredItemsInfo>
+            <ItemComponentID>O12009</ItemComponentID> 
+        </CoveredItemsInfo> 
+        <!-- OBS O "apreda person/night" -->                
+        <CoveredItemsInfo>
+            <ItemComponentID>O12010</ItemComponentID> 
+        </CoveredItemsInfo> 
+        <!-- OBS S-2 "apreda cbn/night" -->                
+        <CoveredItemsInfo>
+            <ItemComponentID>O12012</ItemComponentID> 
+        </CoveredItemsInfo> 
+        <!-- SSV  Shopped "test ssv obst" -->                
+        <CoveredItemsInfo>
+            <ItemComponentID>S17782</ItemComponentID> 
+        </CoveredItemsInfo> 
+        <!-- SSV Asscociated "obsapreda1" -->                
+        <CoveredItemsInfo>
+            <ItemComponentID>O12022</ItemComponentID> 
+        </CoveredItemsInfo> 
+    </InsuranceShop>
+</DtsShopRequestMessage>
+EOF;
+        
+        return $this->xmlRequest($xml);
+    }
 
     public function retrieveBookingRequestMessage($bookingNo)
     {
@@ -296,9 +348,9 @@ EOF;
         <AgencyID>{$this->agencyId}</AgencyID>
         <AgentID>{$this->agentId}</AgentID>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <BookingCurrencyCode>EUR</BookingCurrencyCode>
+        <BookingCurrencyCode>{$this->bookingCurrencyCode}</BookingCurrencyCode>
         <LanguageCode>NLD</LanguageCode>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
         <MarketCode>NLD</MarketCode>
         <BookingNo>{$bookingNo}</BookingNo>
     </BookingContext>
@@ -320,7 +372,7 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <ComponentsToPrice>
         <ComponentDetails>
@@ -334,14 +386,8 @@ EOF;
         return $this->xmlRequest($xml);
     }
 
-    public function bookRequestMessage($bookOrQuote, $componentId, $categoryCode, $cabinNo, $obs)
-    {
-        
-        $participants = [
-            [1, 'Text', 'Mister', 'Test', 'A', 'M'],
-            [2, 'Text', 'Madam', 'Test', 'A', 'F']
-        ];
-        
+    public function bookRequestMessage($participants, $bookOrQuote, $componentId, $categoryCode, $cabinNo, $obs)
+    {   
         $this->setParticipantData($participants);
         
         $xml = <<<EOF
@@ -357,7 +403,7 @@ EOF;
     </BookingAction>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <ParticipantList>
         {$this->participants}
@@ -434,9 +480,9 @@ EOF;
         <AgencyID>{$this->agencyId}</AgencyID>
         <AgentID>{$this->agentId}</AgentID>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <BookingCurrencyCode>EUR</BookingCurrencyCode>
+        <BookingCurrencyCode>{$this->bookingCurrencyCode}</BookingCurrencyCode>
         <LanguageCode>NLD</LanguageCode>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
         <MarketCode>NLD</MarketCode>
         <BookingNo>{$bookingNo}</BookingNo>
     </BookingContext>
@@ -458,7 +504,7 @@ EOF;
     </SessionInfo>
     <BookingContext>
         <BookingContactName>{$this->bookingContactName}</BookingContactName>
-        <OfficeCode>NLD</OfficeCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
     </BookingContext>
     <CruiseComponent>
         <ComponentID>{$componentId}</ComponentID>
