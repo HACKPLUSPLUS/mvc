@@ -101,6 +101,16 @@ EOF;
         $handShakeXml = $this->xmlRequest($xml);
         $this->handShake = $handShakeXml['SessionInfo']['SessionID'];
     }
+    
+    public function setHandShake($handShake)
+    {
+        $this->handShake = $handShake;
+    }
+    
+    public function getHandShake()
+    {
+        return $this->handShake;
+    }
 
     public function cruiseSearch($noAdults, $noChildren, $cruiseShipCode, $cruiseDepartureDate, $cruiseArrivalDate)
     {

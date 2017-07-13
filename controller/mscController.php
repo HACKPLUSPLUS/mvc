@@ -7,10 +7,10 @@ class mscController Extends baseController
         $mscApi = new MscApi();
         $mscApi->login();
         
-        $getBooking = $mscApi->retrieveBookingRequestMessage('26800155'); //26800155 //26798485
-        var_dump($getBooking);
+        /*$getBooking = $mscApi->retrieveBookingRequestMessage('26800155'); //26800155 //26798485
+        var_dump($getBooking);*/
         
-        /*$shipCode = 'MR';
+        $shipCode = 'MR';
         $departureDate = '2017-12-15';
         $arrivalDate = '2017-12-22';
         
@@ -18,7 +18,7 @@ class mscController Extends baseController
         
         echo '<pre>';
         var_dump($sailingId);
-            
+
         $planCode = $mscApi->getPlanCodeFromRequestMessage($sailingId);
         
         var_dump($planCode);
@@ -43,6 +43,6 @@ class mscController Extends baseController
         ];
         
         $bookingXml = $mscApi->bookRequestMessage($participants, 'Q', $sailingId, $categoryCode, $cabinNo, $obs);
-        die(var_dump($bookingXml));*/
+        die(var_dump($bookingXml));
     }
 }

@@ -183,7 +183,7 @@ EOF;
     {
         curl_setopt_array(
             $this->client, [
-                CURLOPT_URL => self::HAL_REAL_ADDRESS,
+                CURLOPT_URL => self::HAL_TEST_ADDRESS,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
