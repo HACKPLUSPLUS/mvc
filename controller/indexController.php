@@ -5,6 +5,60 @@ Class indexController Extends baseController
 
 	public function index()
 	{
+            set_time_limit(0);
+            ignore_user_abort(true); 
+            ini_set('max_execution_time', '0');
+//@include_once("/data/web/cruise/www.cruisereizen.nl/htdocs/config.php");
+//@include_once("../../config.php");
+//$root_path = $ini["SERVER"]["WWW_ROOT"];
+//include_once("$root_path/api/cronjob/cronjob_flatfile_hal/functions.php");
+//$db_fdf = new PDO("mysql:host=localhost;dbname=cr_fdf_history", "cr_fdf_hist_rw", "96fSqsnvpLtw");
+
+//$rederij_id = 25;
+//$filename_org = "$root_path/api/cronjob/haldata/HARES.PRODU.PR#0156.EURNORFD.CRREIZEN";
+//$lastmod = date("Y-m-d H:i:s", filemtime($filename_org));
+$filename = "data/hal_20170731151000.csv";
+
+//if (file_exists($filename_org)) {
+//	copy($filename_org, $filename);
+//	echo "Bestand $filename_org gebackuped naar $filename<BR>".PHP_EOL;
+//} else {
+//	echo "$filename_org niet gevonden!<br>".PHP_EOL;
+//}
+
+
+$file_array = file($filename);
+
+$line = 0;
+$max_lines = count($file_array);
+
+foreach($file_array as $xls=>$row) {
+    echo $row."<br />".PHP_EOL;
+    //continue;
+//$line++;
+	//echo "($line/$max_lines)";
+	//parse_row($row,$xls);
+        $data = explode("\t", $row);
+	echo 'SHIP CODE : ' . $data[0] . "<br />" . PHP_EOL;
+        echo 'DEPARTURE DATE : ' . $data[1] . "<br />" . PHP_EOL;
+        echo 'CATEGORY CODE : ' . $data[2] . "<br />" . PHP_EOL;
+        echo 'REGION : ' . $data[3] . "<br />" . PHP_EOL;
+        echo 'PACKAGE TYPE : ' . $data[4] . "<br />" . PHP_EOL;
+        echo 'PACKAGE TYPE : ' . $data[5] . "<br />" . PHP_EOL;
+        echo 'BEST PRICE : ' . $data[6]/100 . "<br />" . PHP_EOL;
+        echo 'UNKNOWN PRICE : ' . $data[7]/100 . "<br />" . PHP_EOL;
+        echo 'UNKNOWN PRICE : ' . $data[8]/100 . "<br />" . PHP_EOL;
+        $cruise_code_ex = explode(" ", $data[9]);
+        echo 'CRUISE CODE : ' . $cruise_code_ex[0] . "<br />" . PHP_EOL;
+        echo 'UNKNOWN PRICE : ' . $data[10]/100 . "<br />" . PHP_EOL;
+        //$cruise_code_ex = explode(" ", $data[9]);
+	//$cruise_code = $cruise_code_ex[0];
+        //echo $cruise_code."<br />".PHP_EOL;
+        //$schip_code = $data[1];
+        //echo $schip_code."<br />".PHP_EOL;
+}
+die('CULO');
+            
 		$veyron = AutomobileFactory::create( 'Bugatti', 'Veyron' );
 		var_dump( $veyron );
 		
@@ -22,7 +76,6 @@ Class indexController Extends baseController
 		$clean_data->setOutput( new TrimStringOutput( '  ive got <br/>something on my mind!!!! ' ) );
 		
 		var_dump( $clean_data->loadOutput() );
-		
 		
 		/*** COMMAND CHAIN ***/
 		
