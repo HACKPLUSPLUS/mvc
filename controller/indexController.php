@@ -8,6 +8,24 @@ Class indexController Extends baseController
             set_time_limit(0);
             ignore_user_abort(true); 
             ini_set('max_execution_time', '0');
+            
+            $filename = "data/bestFareItinPolar_SBN.txt";
+            
+            $file_array = file($filename);
+            
+            $line = 0;
+            $max_lines = count($file_array);
+
+            foreach($file_array as $xls=>$row) {
+                echo $row."<br />".PHP_EOL;
+                $parts = explode("\t", $row);
+                echo $parts[0] . "<br />".PHP_EOL;
+                $this->registry->db->query("INSERT INTO `itin` (`itin_code`, `step_num`, `weekday`, `port_code`, `port_name`, `departure_time`, `arrival_time`, `itin_description`, `itin_departure_date`) VALUES ('".$parts[0]."', '".$parts[1]."', '".$parts[2]."', '".$parts[3]."', '".mysql_real_escape_string($parts[4])."', '".$parts[5]."', '".$parts[6]."', '".mysql_real_escape_string($parts[7])."', '".$parts[8]."')");
+            }
+            
+            die('BBY');
+
+            
 //@include_once("/data/web/cruise/www.cruisereizen.nl/htdocs/config.php");
 //@include_once("../../config.php");
 //$root_path = $ini["SERVER"]["WWW_ROOT"];
