@@ -1,0 +1,538 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JSON Formatter &amp; Validator</title>
+        <meta lang="en" name="description" content="The JSON Formatter &amp; Validator helps debugging JSON data by formatting and validating JSON data so that it can easily be read by human beings." />
+		<meta lang="en" name="keywords" content="JSON Formatter & Validator,JSON Validator,JSON Formatter,JSON Format,Debug JSON,Pretty Print JSON,Validate JSON,JSON Pretty Printer" />
+                      <meta name="robots" content="INDEX, FOLLOW" />
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="canonical" href="https://jsonformatter.curiousconcept.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="JSON Formatter &amp; Validator" />
+        <meta name="twitter:description" content="Format and validate JSON data so that it can easily be read by human beings." />
+        <meta name="twitter:image" content="https://jsonformatter.curiousconcept.com/img/icon-jsonformatter.png" />
+        <meta name="twitter:url" content="https://jsonformatter.curiousconcept.com">
+        <meta name="twitter:creator" content="@curiousconcept">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="JSON Formatter &amp; Validator" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://jsonformatter.curiousconcept.com" />
+		<meta property="og:image" content="https://jsonformatter.curiousconcept.com/img/icon-jsonformatter.png" />
+		<meta property="og:description" content="Format and validate JSON data so that it can easily be read by human beings." />
+
+
+        <link href="https://jsonformatter.curiousconcept.com/css/style.3a7624a2.css" rel="stylesheet" media="screen" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+       <script type="text/javascript">
+			var processURL = 'https://jsonformatter.curiousconcept.com/process';
+            var contactURL = 'https://jsonformatter.curiousconcept.com/send';
+		</script>
+    </head>
+	<body data-spy="scroll" data-offset="71" data-target=".navbar-default" id="page-top">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                    <h1>
+					   <a class="navbar-brand" href="#"><img alt="JSON Formatter &amp; Validator" src="https://jsonformatter.curiousconcept.com/img/logo-jsonformatter.png" /></a>
+                    </h1>
+				</div>
+
+                <ul class="nav navbar-nav visible-md visible-lg">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://dataconverter.curiousconcept.com"><img height="15" src="https://jsonformatter.curiousconcept.com/img/logo-dataconverter.png" /></a></li>
+                            <li><a href="https://jsonpath.curiousconcept.com"><img height="15" src="https://jsonformatter.curiousconcept.com/img/logo-jsonpath.png" /></a></li>
+							<li><a href="https://jsonselect.curiousconcept.com"><img height="15" src="https://jsonformatter.curiousconcept.com/img/logo-jsonselect.png" /></a></li>
+							<li class="divider"></li>
+							<li><a href="https://zuq.curiousconcept.com"><img height="19" src="https://jsonformatter.curiousconcept.com/img/logo-zuq.png" /></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav navbar-right">
+                        <li class="hidden"><a href="#page-top"></a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#learn">Learn</a></li>
+						<li><a href="#bookmarklet">Bookmarklet</a></li>
+						<li><a href="#changelog">Changelog</a></li>
+						<li class="dropdown visible-xs visible-sm">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Tools <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://dataconverter.curiousconcept.com"><img height="15" src="https://jsonformatter.curiousconcept.com/img/logo-dataconverter.png" /></a></li>
+                                <li><a href="https://jsonpath.curiousconcept.com"><img height="15" src="https://jsonformatter.curiousconcept.com/img/logo-jsonpath.png" /></a></li>
+								<li><a href="https://jsonselect.curiousconcept.com"><img height="15" src="https://jsonformatter.curiousconcept.com/img/logo-jsonselect.png" /></a></li>
+								<li class="divider"></li>
+								<li><a href="https://zuq.curiousconcept.com"><img height="19" src="https://jsonformatter.curiousconcept.com/img/logo-zuq.png" /></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#support">Support</a></li>
+						<li><a href="#contact">Contact</a></li>
+                        <li><a href="https://twitter.com/curiousconcept"><i class="fa fa-twitter"></i></a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+        <section class="formatter">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 errorholder">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 hint">
+                            <i class="fa fa-mail-forward fa-5x"></i>
+                            <br />
+                            <br />
+                            <p>Paste in JSON or a URL and away you go.</p>
+                        </div>
+                        <div class="col-md-8 col-md-offset-0">
+                            <div class="form-group">
+                                <label for="exampleInputFile">JSON Data/URL</label>
+								<div class="jsondataholder">
+                                	<textarea rows="5" class="form-control" id="jsondata" name="jsondata"></textarea>
+									<div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-link btn-clear btn-sm"><i class="fa fa-trash-o"></i></button>
+                                    </div>
+								</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 options">
+
+                            <div class="form-group">
+                                <label for="exampleInputFile">JSON Standard</label>
+                                <select class="form-control" id="jsonstandard" name="jsonstandard">
+                                    <option value="1" selected>RFC 4627</option>
+									<option value="2">RFC 7159</option>
+                                    <option value="3">ECMA-404</option>
+                                    <option value="0">Do Not Validate</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">JSON Template</label>
+                                <select class="form-control" id="jsontemplate" name="jsontemplate">
+                                    <option value="0">4 Space Tab</option>
+									<option value="1" selected>3 Space Tab</option>
+                                    <option value="2">2 Space Tab</option>
+                                    <option value="3">Compact</option>
+                                </select>
+                            </div>
+                            <i class="hidden-xs hidden-sm fa fa-mail-forward fa-5x fa-rotate-180"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+							<button type="button" id="process" class="btn btn-action btn-lg" data-loading-text="<i class='fa fa-cog fa-spin'></i>">Process</button>
+                        </div>
+                    </div>
+                </form>
+            </div> <!--/ .container -->
+        </section><!--/ #formatterwrap -->
+
+        <section class="results">
+            <div class="media">
+                <div class="container">
+                   <div class="row">
+                        <div class="col-sm-12 text-center">
+                                                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- JSONFormatter -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:728px;height:90px;"
+                                 data-ad-client="ca-pub-4807770044227876"
+                                 data-ad-slot="1764616909"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>About</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                        <p>The <a href="#" title="JSON Formatter &amp; Validator">JSON Formatter</a> was created to help with debugging. As JSON data is often output without line breaks to save space, it is extremely difficult to actually read and make sense of it. This little tool hoped to solve the problem by formatting the JSON data so that it is easy to read and debug by human beings.</p>
+
+                        <p>Shortly after it was created, JSON validation was added following the description set out by Douglas Crockford of <a title="Visit json.org" href="http://json.org/">json.org</a> in <a title="Visit the RFC 4627 JSON Standard" href="http://www.ietf.org/rfc/rfc4627.txt?number=4627">RFC 4627</a>.  It has since been expanded to also validate both current competing JSON standards <a title="Visit the RFC 7159 JSON Standard" href="https://tools.ietf.org/html/rfc7159">RFC 7159</a> and <a title="Visit the ECMA-404 JSON Standard" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">ECMA-404</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2>Learn About JSON</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1 ">
+                        <p>JSON or JavaScript Object Notation is a language-independent open data format that uses human-readable text to express data objects consisting of attribute-value pairs.</p>
+                        <p>Although originally derived from the JavaScript scripting language, JSON data can be generated and parsed with a wide variety of programming languages including JavaScript, PHP, Python, Ruby and Java.</p>
+				    </div>
+                    <div class="col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 ">
+                        <p>To learn more about JSON check out some of the following links.</p>
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-external-link"></i><a title="Visit json.org" href="http://json.org/">json.org</a></li>
+                            <li><i class="fa-li fa fa-external-link"></i><a title="Visit Wikipedia's JSON Entry" href="http://en.wikipedia.org/wiki/JSON">Wikipedia - JSON</a></li>
+                            <li><i class="fa-li fa fa-external-link"></i><a href="http://www.w3schools.com/json/" title="Visit w3schools.com's JSON Tutorial">w3schools.com - JSON Tutorial</a></li>
+                            <li><i class="fa-li fa fa-external-link"></i><a title="Visit the blog post that started JSONP" href="http://bob.ippoli.to/archives/2005/12/05/remote-json-jsonp/">bob.ippoli.to - Remote JSON - JSONP</a></li>
+                            <li><i class="fa-li fa fa-external-link"></i><a title="Visit json-p.org" href="http://www.json-p.org/">json-p.org</a>
+                            <li><i class="fa-li fa fa-external-link"></i><a title="Visit Wikipedia's JSONP Entry" href="http://en.wikipedia.org/wiki/JSON#JSONP">Wikipedia - JSONP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bookmarklet">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2>Bookmarklet</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1  text-center">
+                        <p>Install the JSON Formatter &amp; Validator Bookmarklet to quickly and easily format and validate any public JSON URL with a single click.</p>
+				    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-center">
+                        <p><br/>    <a class="bookmarklet btn btn-action" href="javascript:(function(){ window.open('https://jsonformatter.curiousconcept.com/#'+encodeURI(location.href)); })();">Format &amp; Validate JSON</a>
+                            <br/><br/>
+                            <small>To install, just drag the button above into your bookmarks toolbar.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="changelog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2>Changelog</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                      <h3 class="h4">October 2016</h3>
+            					<ul>
+                            <li>Switched copy to use <a href="https://clipboardjs.com/" title="Visit clipboard.js">clipboard.js</a>.</li>
+                      </ul>
+					<h3 class="h4">July 2016</h3>
+					<ul>
+                        <li>Fixed a RFC 7159 validation bug.  <small class="text-muted">Thanks Anonymous.</small></li>
+                    </ul>
+					<h3 class="h4">November 2015 <small>v4.5</small></h3>
+					<ul>
+                        <li>Added the ability to validate additional JSON standards, <a title="Visit the RFC 7159 JSON Standard" href="https://tools.ietf.org/html/rfc7159">RFC 7159</a> and <a title="Visit the ECMA-404 JSON Standard" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">ECMA-404</a>.</li>
+                        <li>Added tooltips.</li>
+                        <li>Improved url validation.</li>
+                        <li>Fixed a validation bug.  <small class="text-muted">Thanks Philipp.</small></li>
+                        <li>Fixed a parse bug.  <small class="text-muted">Thanks Bla.</small></li>
+                    </ul>
+                    <h3 class="h4">October 2015</h3>
+					<ul>
+                        <li>Added the ability expand/collapse all nodes.</li>
+                    </ul>
+                    <h3 class="h4">August 2015</h3>
+					<ul>
+                        <li>Added the ability to rename results.</li>
+                        <li>Added the ability to download results.</li>
+                        <li>Switched to HTTPS.</li>
+						<li>Fixed a text rendering bug.  <small class="text-muted">Thanks Kyle.</small></li>
+					</ul>
+                    <h3 class="h4">October 2014</h3>
+					<ul>
+						<li>Fixed a template collapse/expand bug.  <small class="text-muted">Thanks Dmitry.</small></li>
+						<li>Fixed a copied result entity bug.  <small class="text-muted">Thanks Jim.</small></li>
+					</ul>
+					<h3 class="h4">September 2014</h3>
+					<ul>
+						<li>Added a four space tab template.</li>
+						<li>Added a clear button.</li>
+						<li>Improved grow/shrink buttons.</li>
+						<li>Fixed a clipboard bug.</li>
+					</ul>
+					<h3 class="h4">July 2014 <small>v4.0</small></h3>
+					<ul>
+						<li>Redesign of frontend.</li>
+                        <li>Updated backend from <a title="Visit CodeIgniter" href="http://codeigniter.com/">CodeIgniter</a> to <a title="Visit Larvel" href="http://laravel.com/">Laravel</a>.</li>
+                        <li>Added cookies to remember options.</li>
+					</ul>
+					<h3 class="h4">September 2013</h3>
+					<ul>
+						<li>Changed hosts to further improve speed.</li>
+					</ul>
+
+					<h3 class="h4">April 2013</h3>
+					<ul>
+						<li>Added autofocus to JSON Data input.</li>
+						<li>Fixed stripping of invisible characters. <small class="text-muted">Thanks Paul.</small></li>
+					</ul>
+					<h3 class="h4">March 2013</h3>
+					<ul>
+						<li>Fixed a typo.  <small class="text-muted">Thanks Anonymous.</small></li>
+						<li>Added a donation button.</li>
+					</ul>
+					<h3 class="h4">February 2013</h3>
+				    <ul>
+                       <li>Fixed a number validation bug.  <small class="text-muted">Thanks Chris and Anonymous.</small></li>
+                    </ul>
+					<h3 class="h4">January 2013</h3>
+					<ul>
+						<li>Updated external libraries.</li>
+						<li>Improved caching.</li>
+					</ul>
+					<h3 class="h4">May 2011</h3>
+					<ul>
+						<li>Added ability to collapse/expand objects and arrays.</li>
+						<li>Added a two space tab template.</li>
+						<li>Fixed bugs reported since version 3.0.</li>
+					</ul>
+					<h3 class="h4">February 2011 <small>v3.0</small></h3>
+					<ul>
+						<li>Redesign of frontend.</li>
+						<li>Improved validation logic.  String validation in particular is greatly improved.</li>
+						<li>Improved error messages.</li>
+						<li>Added goto error ability.</li>
+						<li>Added ability to accept JSONP. Check out this <a title="JSONP Validation Example" href="#http://api.duckduckgo.com/?q=JSON&amp;format=json&amp;callback=exec">example</a>.</li>
+						<li>Added ability to pass JSON URL in URL as hash. Check out this <a title="JSON URL Example" href="#http://api.reddit.com/search?q=kittens&amp;limit=2">example</a>.</li>
+						<li>Added a <a title="JSON Validator Bookmarklet" href="#bookmarklet">bookmarklet</a>.</li>
+						<li>Added a button to copy results to clipboard.</li>
+						<li>Removed custom template capability.  From now on <a title="Contact" href="#contact">send in template requests &amp; examples</a>.</li>
+						<li>Removed Select All button.</li>
+					</ul>
+					<h3 class="h4">November 2009</h3>
+					<ul>
+                        <li>Upgraded hosts to improve speed.</li>
+                    </ul>
+					<h3 class="h4">December 2008</h3>
+					<ul>
+                        <li>Added a Select All button.</li>
+                        <li>Fixed url validation and output bugs.</li>
+                    </ul>
+					<h3 class="h4">November 2008 <small>v2.0</small></h3>
+					<ul>
+                        <li>Improved JSON formatter.</li>
+                        <li>Improved JSON parser.</li>
+                        <li>Redesign of frontend.</li>
+                        <li>Added multiple results.</li>
+                        <li>Added templates.</li>
+                        <li>Added more helpful error messages.</li>
+                        <li>Added validation.</li>
+                        <li>Added resizable textareas.</li>
+                    </ul>
+					<h3 class="h4">A Long Time Ago... in 2007 <small>v1.0</small></h3>
+					<ul>
+                        <li>Initial release of the JSON Formatter.</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                       <h2>Support</h2>
+                       <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1  text-center">
+                        <p>Although you are in no way obligated, some users have requested a way to support the project.</p>
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin:0 0 1.5em;">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        <br/>
+                        <p><small>A big thank you goes out to all the donors who have already contributed. Your kindness is very much appreciated.</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2>Contact</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 text-center">
+                        <p>Over the years the JSON Formatter &amp; Validator has been immensely improved through the feedback and suggestions of its users.  We encourage you to continue to pass along any new recommendations, requests or bug reports.</p>
+                        <br/>
+                    </div>
+                </div>
+                <form role="form" class="row">
+                    <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1  text-center">
+                       <div class="form-group">
+                            <input class="form-control name" type="text" name="name" placeholder="Name">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control email" type="email" name="email" placeholder="Email Address">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control url" type="url" name="url" placeholder="URL">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea placeholder="Message" class="form-control message" name="message" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-lg btn-action" id="send" data-loading-text="<i class='fa fa-cog fa-spin'></i>">Send</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <p>© 2007 - 2017 <a href="https://curiousconcept.com">Curious Concept</a> | <a href="https://curiousconcept.com/privacy">Privacy Policy</a></p>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="contactresult" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body text-center">
+                <p>Thank you for taking the time to write in.</p>
+                <p>We will reply as soon as possible.</p>
+                <br />
+                <button type="button" class="btn btn-action" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+		<div class="container" id="templates" style="display: none;">
+			<div class="alert alert-danger"></div>
+			<div class="result">
+                <div class="container">
+                   <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="top">
+                                <div class="left">
+                                    <h3></h3>
+                                </div>
+                                <div class="middle">
+                                    <div class="name"><div>
+                                        <span></span>
+                                        <i class="fa fa-pencil"></i>
+                                        <input class="form-control input-sm" type="text" />
+                                    </div></div>
+                                    <div class="url"><div><span></span></div></div>
+                                </div>
+                                <div class="right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-result btn-copy" title="Copy to Clipboard"><i class="fa fa-files-o"></i></button>
+                                        <button type="button" class="btn btn-result btn-download" title="Download as File"><i class="fa fa-download"></i></button>
+                                        <button type="button" class="btn btn-result btn-collapse-data" title="Collapse All Nodes"><i class="fa fa-minus-square-o"></i></button>
+                                        <button type="button" class="btn btn-result btn-expand-data" title="Expand All Nodes"><i class="fa fa-plus-square-o"></i></button>
+                                        <button type="button" class="btn btn-result btn-collapse-window" title="Collapse Result"><i class="fa fa-caret-square-o-up"></i></button>
+                                        <button type="button" class="btn btn-result btn-expand-window" title="Expand Results"><i class="fa fa-caret-square-o-down"></i></button>
+                                        <button type="button" class="btn btn-result btn-close" title="Close Result"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom collapseable">
+                                <div class="validity validity-valid">Valid JSON (<span></span>)</div>
+                                <div class="validity validity-invalid">Invalid JSON (<span></span>)</div>
+                                <span class="labels">Validator Output</span>
+                                <ul class="errors list-unstyled"></ul>
+                                <span class="labels">Formatted JSON Data</span>
+                                <div class="jsonholder">
+                                    <div tabindex="-1" class="json"></div>
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-result btn-sm  btn-shrink" title="Shrink Result"><i class="fa fa-minus"></i></button>
+                                        <button type="button" class="btn btn-result btn-sm btn-grow" title="Grow Result"><i class="fa fa-plus"></i></button>
+                                        <button type="button" class="btn btn-result btn-sm  btn-fullscreen" title="Fullscreen"><i class="fa fa-arrows-alt"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+				        </div>
+                   </div>
+                </div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/script.e285c5fa.js"></script>
+                <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(14186);
+            (function() {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://static.getclicky.com/js';
+                ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+        </script>
+        <noscript><p><img alt="Clicky" width="1" height="1" src="https://in.getclicky.com/14186ns.gif" /></p></noscript>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-463734-6', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+        	</body>
+</html>
