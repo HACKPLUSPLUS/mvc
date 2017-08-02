@@ -9,7 +9,7 @@ Class indexController Extends baseController
             ignore_user_abort(true); 
             ini_set('max_execution_time', '0');
             
-            $filename = "data/bestFareItinPolar_SBN.txt";
+            $filename = "data/bestFareItinPolar.txt";
             
             $file_array = file($filename);
             
