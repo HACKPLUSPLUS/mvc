@@ -5,24 +5,30 @@ Class indexController Extends baseController
 
 	public function index()
 	{
-            set_time_limit(0);
-            ignore_user_abort(true); 
-            ini_set('max_execution_time', '0');
+            //set_time_limit(0);
+            //ignore_user_abort(true); 
+            //ini_set('max_execution_time', '0');
             
-            $filename = "data/bestFareItinPolar.txt";
+            //$filename = "data/bestFareItinPolar.txt";
             
-            $file_array = file($filename);
+            //$file_array = file($filename);
             
-            $line = 0;
-            $max_lines = count($file_array);
+            //$line = 0;
+            //$max_lines = count($file_array);
 
-            foreach($file_array as $xls=>$row) {
-                echo $row."<br />".PHP_EOL;
-                $parts = explode("\t", $row);
-                echo $parts[0] . "<br />".PHP_EOL;
-                $this->registry->db->query("INSERT INTO `itin` (`itin_code`, `step_num`, `weekday`, `port_code`, `port_name`, `departure_time`, `arrival_time`, `itin_description`, `itin_departure_date`) VALUES ('".$parts[0]."', '".$parts[1]."', '".$parts[2]."', '".$parts[3]."', '".mysql_real_escape_string($parts[4])."', '".$parts[5]."00', '".$parts[6]."00', '".mysql_real_escape_string($parts[7])."', '".$parts[8]."')");
+            //foreach($file_array as $xls=>$row) {
+                //echo $row."<br />".PHP_EOL;
+                //$parts = explode("\t", $row);
+                //echo $parts[0] . "<br />".PHP_EOL;
+                //$this->registry->db->query("INSERT INTO `itin` (`itin_code`, `step_num`, `weekday`, `port_code`, `port_name`, `departure_time`, `arrival_time`, `itin_description`, `itin_departure_date`) VALUES ('".$parts[0]."', '".$parts[1]."', '".$parts[2]."', '".$parts[3]."', '".mysql_real_escape_string($parts[4])."', '".$parts[6]."00', '".$parts[5]."00', '".mysql_real_escape_string($parts[7])."', '".$parts[8]."')");
+            //}
+            $sql = $this->registry->db->query("SELECT * FROM itin WHERE itin_code = 'O8A15W' ORDER BY step_num ASC");
+            $itin = $sql->fetchAll(PDO::FETCH_ASSOC);
+            //var_dump($itin);
+            foreach($itin as $step) {
+                echo $step["step_num"] . ' '. $step["weekday"] . ' ' . $step["port_code"] . ' ' . $step["arrival_time"] . $step["departure_time"] . '<br/>';
+                //var_dump($step);
             }
-            
             die('BBY');
 
             
