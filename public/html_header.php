@@ -74,7 +74,5 @@ span.labelstyle-ffffff, .linked-labelstyle-ffffff {  background-color: #ffffff !
 
 
   <meta name="u2f-support" content="true">
-
   </head>
-
   <body class="logged-in env-production">

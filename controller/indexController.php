@@ -20,7 +20,7 @@ Class indexController Extends baseController
                 echo $row."<br />".PHP_EOL;
                 $parts = explode("\t", $row);
                 echo $parts[0] . "<br />".PHP_EOL;
-                $this->registry->db->query("INSERT INTO `itin` (`itin_code`, `step_num`, `weekday`, `port_code`, `port_name`, `departure_time`, `arrival_time`, `itin_description`, `itin_departure_date`) VALUES ('".$parts[0]."', '".$parts[1]."', '".$parts[2]."', '".$parts[3]."', '".mysql_real_escape_string($parts[4])."', '".$parts[5]."', '".$parts[6]."', '".mysql_real_escape_string($parts[7])."', '".$parts[8]."')");
+                $this->registry->db->query("INSERT INTO `itin` (`itin_code`, `step_num`, `weekday`, `port_code`, `port_name`, `departure_time`, `arrival_time`, `itin_description`, `itin_departure_date`) VALUES ('".$parts[0]."', '".$parts[1]."', '".$parts[2]."', '".$parts[3]."', '".mysql_real_escape_string($parts[4])."', '".$parts[5]."00', '".$parts[6]."00', '".mysql_real_escape_string($parts[7])."', '".$parts[8]."')");
             }
             
             die('BBY');
