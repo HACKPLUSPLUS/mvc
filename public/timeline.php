@@ -2142,6 +2142,7 @@ from
       Add <a href='/cruisereizen/cruisereizen/pull/979.patch' data-skip-pjax>.patch</a> or <a href='/cruisereizen/cruisereizen/pull/979.diff' data-skip-pjax>.diff</a> to the end of URLs for Git’s plaintext views.
     </div>
 <?php             include 'html_repository_content.php'; ?>
+<?php include 'html_pricing_setup.php'; ?>
 </div>
 
 
