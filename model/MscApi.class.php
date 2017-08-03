@@ -4,8 +4,8 @@
  */
 class MscApi
 {
-    CONST MSC_REAL_ADDRESS = 'https://wsrv.msccruises.com/upp/proxy/push/65d3e6dc6d0d2ab3';
-    CONST MSC_TEST_ADDRESS = 'https://wsrv.msccruises.com/upp/proxy/push/9ed867470315c6c3';
+    CONST MSC_REAL_ADDRESS = 'https://wsrv.msccruises.com/upp/proxy/push/65d3e6dc6d0d2ab3'; //header response text/html
+    CONST MSC_TEST_ADDRESS = 'https://wsrv.msccruises.com/upp/proxy/push/9ed867470315c6c3'; //header response text/xml
 
     public $client = false;
     public $handShake;
@@ -497,6 +497,45 @@ EOF;
         <BookingNo>{$bookingNo}</BookingNo>
     </BookingContext>
 </DtsConfirmBookingRequestMessage>
+EOF;
+
+        return $this->xmlRequest($xml);
+    }
+    
+    public function paxUpdateRequestMessage($participants, $bookingNo)
+    {
+        $this->setParticipantData($participants);
+        
+        $xml = <<<EOF
+<DtsPaxUpdateRequestMessage>
+    <SessionInfo>
+        <Profile>A</Profile>
+        <Language>{$this->language}</Language>
+        <Version>{$this->version}</Version>
+        <SessionID>{$this->handShake}</SessionID>
+    </SessionInfo>
+    <BookingContext>
+        <AgencyID>{$this->agencyId}</AgencyID>
+        <BookingContactName>{$this->bookingContactName}</BookingContactName>
+        <MarketCode>NLD</MarketCode>
+        <BookingCurrencyCode>{$this->bookingCurrencyCode}</BookingCurrencyCode>
+        <LanguageCode>NLD</LanguageCode>
+        <OfficeCode>{$this->officeCode}</OfficeCode>
+        <BookingNo>{$bookingNo}</BookingNo>
+    </BookingContext>
+    <ParticipantList>
+        {$this->participants}
+        <PassportData>
+            <PassportNo>AI22222</PassportNo>
+            <PassportIssuedDate>2000-04-17</PassportIssuedDate>
+            <PassportIssuedAt>2013-04-18</PassportIssuedAt>
+            <PassportExpireDate>2017-04-16</PassportExpireDate>
+            <NationalID>123456</NationalID>
+            <NatIDExpryDate>2015-04-16</NatIDExpryDate>
+            <PersonNo>1</PersonNo>
+        </PassportData>
+    </ParticipantList>
+</DtsPaxUpdateRequestMessage>
 EOF;
 
         return $this->xmlRequest($xml);
