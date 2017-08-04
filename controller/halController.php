@@ -7,15 +7,21 @@ class halController Extends baseController
         $halApi = new HalApi();
         
         $cruisesearch = $halApi->productAvailabilityRequest(
-        '07222018',
-        '07292018',
-        '7',
-        '7',
-        'KO',
-        2
-    );
+            '07222018',
+            '07292018',
+            '7',
+            '7',
+            'KO',
+            2
+        );
         
-        //var_dump($cruisesearch);
+        if (!empty($cruisesearch->ProductAvailabilityResponse)) {
+            foreach ($cruisesearch->ProductAvailabilityResponse as $cruise) {
+                $cruise = new HalCruise($cruise);
+            }
+        }
+        
+        die;
         
         $sailingIds = $halApi->getSailingIdsFromCruiseSearch($cruisesearch);
         
