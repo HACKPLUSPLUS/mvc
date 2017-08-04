@@ -3,7 +3,7 @@
 ?>
   <div class="position-relative js-header-wrapper ">
     <a href="#start-of-content" tabindex="1" class="bg-black text-white p-3 show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>      
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
 <div class="header" role="banner">
   <div class="container-lg px-3 clearfix">
     <div class="d-flex flex-justify-between">
@@ -13,7 +13,7 @@
 </a>
 
 
-            
+
 
           <ul class="d-flex list-style-none" role="navigation">
             <li>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="d-flex">
-       <?php 
+       <?php
        include 'html_user_links.php';
        ?>
         <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/logout" class="sr-only right-0" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Il/dZ9nS2ECXcTBhICrt1LFf+PaWV2tSgVWcYAozAMgEYCLnhuelCTMRGCYj7YhZ2+EVAkLCTW/PGEsG8ma5zg==" /></div>
@@ -48,7 +48,7 @@
 </div>
 
 
-      
+
 
   </div>
 
@@ -62,14 +62,14 @@
   <div role="main">
         <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
     <div id="js-repo-pjax-container" data-pjax-container>
-      
+
 
 <!-- base sha1: &quot;a0744d1e3dd71c013d45803be3a538484442397a&quot; -->
 <!-- head sha1: &quot;719a3e2530213071eec9d579332af8fa1dcb4b6f&quot; -->
 
 
 
-  
+
 
 
     <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
@@ -155,7 +155,7 @@
   </li>
 
   <li>
-    
+
   <div class="js-toggler-container js-social-container starring-container ">
     <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/unstar" class="starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="nZNMtLTEuqwYUpkThwngOw7Ew5xyD4fSSQ2uj0kiFBuoxPGA/lR2MEZRjR5BklWnuYf4dxv+fBbhAWgatCE7Pw==" /></div>
       <button
@@ -218,7 +218,7 @@
 
       </div>
       <div class="container">
-        
+
 <nav class="reponav js-repo-nav js-sidenav-container-pjax"
      itemscope
      itemtype="http://schema.org/BreadcrumbList"
@@ -284,14 +284,14 @@
 <div class="container new-discussion-timeline experiment-repo-nav">
   <div class="repository-content">
 
-    
+
   <div class="issues-listing" data-pjax>
-    
-  
+
+
 
 
   <div class="clearfix js-issues-results">
-    
+
   <div
     id="partial-discussion-header"
     class="gh-header js-details-container Details js-socket-channel js-updatable-content pull request"
@@ -349,7 +349,7 @@ from
 
 
       <include-fragment src="/cruisereizen/cruisereizen/pull/979/show_partial?partial=pull_requests%2Ftabs">
-    
+
 <div class="tabnav tabnav-pr">
 
   <nav class="tabnav-tabs">
@@ -393,7 +393,7 @@ from
 
     <div class="discussion-sidebar-item sidebar-assignee js-discussion-sidebar-item position-relative">
   <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/pull/979/review-requests?pr_global_id=MDExOlB1bGxSZXF1ZXN0MTMxMDUzNjk5" class="js-issue-sidebar-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="BYEipmYRRf59GF1q77j/VoWySvtwtOwk9P6LDPFO4+6OVQ+1F340JuC0fz5UjVnWsbP1blpVlzzHhLZAVrD1bQ==" /></div>
-    
+
 
   <div class="select-menu js-menu-container js-select-menu js-load-contents js-review-requests-menu"
        data-contents-url="/cruisereizen/cruisereizen/pull/979/review-requests"
@@ -414,8 +414,8 @@ from
           <span class="select-menu-title">Request a review</span>
         </div>
 
-          
-  
+
+
 <div class="select-menu-filters">
   <div class="select-menu-text-filter">
     <input type="text" id="review-filter-field" class="form-control js-filterable-field js-navigation-enable"
@@ -476,7 +476,7 @@ from
 
   <div class="discussion-sidebar-item sidebar-assignee js-discussion-sidebar-item">
   <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/issues/979?partial=issues%2Fsidebar%2Fshow%2Fassignees" class="js-issue-sidebar-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="Kz92R3EbRXshQTPqhV8OLU56ScrpbxWWZpDaHFGDa6f/9WYyjEwtuHvh8DczzfmbE9IzazHviwwIEn/7zIyBhQ==" /></div>
-    
+
 
   <div class="select-menu js-menu-container js-select-menu js-load-contents "
        data-contents-url="/cruisereizen/cruisereizen/issues/979/show_partial?partial=issues%2Fsidebar%2Fassignees_menu_content"
@@ -497,8 +497,8 @@ from
           <span class="select-menu-title">Assign up to 10 people to this issue</span>
         </div>
 
-          
-  
+
+
 <div class="select-menu-filters">
   <div class="select-menu-text-filter">
     <input type="text" id="assignee-filter-field" class="form-control js-filterable-field js-navigation-enable"
@@ -567,7 +567,7 @@ from
 
   <div class="discussion-sidebar-item sidebar-labels js-discussion-sidebar-item">
   <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/issues/979?partial=issues%2Fsidebar%2Fshow%2Flabels" class="js-issue-sidebar-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="UDGSnNTdTJ3hVWVWTpa9LPNEdYssi+b+YXQNxFrwloeE+4LpKYokXrv1pov4BEqaruwPKvQLeGQP9qgjx/98pQ==" /></div>
-      
+
 
   <div class="select-menu js-menu-container js-select-menu js-load-contents label-select-menu"
        data-contents-url="/cruisereizen/cruisereizen/issues/979/show_partial?partial=issues%2Fsidebar%2Flabels_menu_content"
@@ -606,7 +606,7 @@ from
 
     <div class="discussion-sidebar-item js-discussion-sidebar-item">
   <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/projects/issues/979" class="js-issue-sidebar-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="NA02INlFPPzrc6EMFvxpII1BvrshUsKXB60xypewwVyx3hSh/dzsmoyz9Vz7OLSUOitez+6YVG5JFpiEL7Zmwg==" /></div>
-    
+
 
   <div class="select-menu js-menu-container js-select-menu js-load-contents "
        data-contents-url="/cruisereizen/cruisereizen/issues/979/show_partial?partial=issues%2Fsidebar%2Fprojects_menu_content"
@@ -643,7 +643,7 @@ from
 
   <div class="discussion-sidebar-item sidebar-milestone js-discussion-sidebar-item">
   <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/issues/979/set_milestone?partial=issues%2Fsidebar%2Fshow%2Fmilestone" class="js-issue-sidebar-form" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="Chg+MnZKnNwTA1eZ6u1Fnta28777Ymfk6Ia+wgeYczXuDaOhHgQwwcb8bS7mb+6C88Srd9DGf+oVr+M6v3RnCw==" /></div>
-    
+
 
   <div class="select-menu js-menu-container js-select-menu js-load-contents "
        data-contents-url="/cruisereizen/cruisereizen/issues/979/show_partial?partial=issues%2Fsidebar%2Fmilestone_menu_content"
@@ -712,7 +712,7 @@ from
 </div>
 
 
-  
+
   <div class="discussion-sidebar-item lock-toggle">
     <a href="#lock-confirmation" rel="facebox" class="lock-toggle-link">
         <svg aria-hidden="true" class="octicon octicon-lock" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 13H3v-1h1v1zm8-6v7c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h1V4c0-2.2 1.8-4 4-4s4 1.8 4 4v2h1c.55 0 1 .45 1 1zM3.8 6h4.41V4c0-1.22-.98-2.2-2.2-2.2-1.22 0-2.2.98-2.2 2.2v2H3.8zM11 7H2v7h9V7zM4 8H3v1h1V8zm0 2H3v1h1v-1z"/></svg>
@@ -752,12 +752,12 @@ from
 
 <div class="discussion-timeline pull-discussion-timeline js-pull-discussion-timeline js-quote-selection-container js-review-state-classes  ">
   <div class="js-discussion js-socket-channel" data-channel="marked-as-read:pull-request:131053699">
-    
 
-  
+
+
   <div class="timeline-comment-wrapper js-comment-container">
 
-    
+
 
 <div class="avatar-parent-child timeline-comment-avatar">
     <a href="/jariketting">
@@ -768,16 +768,16 @@ from
 
 
 
-      
+
 <div id="issue-243670920"
      class="comment previewable-edit js-comment js-task-list-container timeline-comment js-reorderable-task-lists reorderable-task-lists "
      data-body-version="d41d8cd98f00b204e9800998ecf8427e">
 
-  
+
 <div class="timeline-comment-header">
   <div class="timeline-comment-actions">
 
-      
+
   <span class="reaction-popover-container dropdown js-socket-channel js-updatable-content js-reaction-popover-container js-comment-header-reaction-button js-menu-container"
       data-channel="reaction:pull-request:131053699"
       data-url="/_render_node/MDExOlB1bGxSZXF1ZXN0MTMxMDUzNjk5/comments/comment_header_reaction_button">
@@ -785,7 +785,7 @@ from
       <svg aria-hidden="true" class="octicon octicon-plus-small add-reaction-plus-icon" height="16" version="1.1" viewBox="0 0 7 16" width="7"><path fill-rule="evenodd" d="M4 7V4H3v3H0v1h3v3h1V8h3V7H4z"/></svg>
       <svg aria-hidden="true" class="octicon octicon-smiley" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm4.81 12.81a6.72 6.72 0 0 1-2.17 1.45c-.83.36-1.72.53-2.64.53-.92 0-1.81-.17-2.64-.53-.81-.34-1.55-.83-2.17-1.45a6.773 6.773 0 0 1-1.45-2.17A6.59 6.59 0 0 1 1.21 8c0-.92.17-1.81.53-2.64.34-.81.83-1.55 1.45-2.17.62-.62 1.36-1.11 2.17-1.45A6.59 6.59 0 0 1 8 1.21c.92 0 1.81.17 2.64.53.81.34 1.55.83 2.17 1.45.62.62 1.11 1.36 1.45 2.17.36.83.53 1.72.53 2.64 0 .92-.17 1.81-.53 2.64-.34.81-.83 1.55-1.45 2.17zM4 6.8v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2H5.2C4.53 8 4 7.47 4 6.8zm5 0v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2h-.59C9.53 8 9 7.47 9 6.8zm4 3.2c-.72 1.88-2.91 3-5 3s-4.28-1.13-5-3c-.14-.39.23-1 .66-1h8.59c.41 0 .89.61.75 1z"/></svg>
     </button>
-    
+
 <div class="dropdown-menu-content anim-scale-in js-menu-content">
   <div class="dropdown-menu dropdown-menu-sw add-reaction-popover js-add-reaction-popover">
     <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/users/cruisereizen/reactions" class="reaction-popover-form js-pick-reaction" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="NrIrHDQhNG1gvsvCyCvMpzQDKscPMhxjbLxodax7s7G7Ht54qKgchhNKlk/9lTuK2U67iKlOTVu08pgfSoh7ZA==" /></div>
@@ -861,7 +861,7 @@ from
 
   </div>
 
-    
+
 
 
 
@@ -869,7 +869,7 @@ from
 
     <strong>
         <a href="/jariketting" class="author">jariketting</a>
-        
+
     </strong>
 
     commented
@@ -897,7 +897,7 @@ from
       </tbody>
     </table>
 
-      
+
 
 <div class="comment-reactions  js-reactions-container js-socket-channel js-updatable-content"
 
@@ -1131,14 +1131,14 @@ from
 
   </div>
 
-  
-  
+
+
 <div class="discussion-item discussion-commits" id="commits-pushed-26a52a1">
     <h3 class="discussion-item-header f5 text-normal">
       <span class="discussion-item-icon">
         <svg aria-hidden="true" class="octicon octicon-repo-push" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 3H3V2h1v1zM3 5h1V4H3v1zm4 0L4 9h2v7h2V9h2L7 5zm4-5H1C.45 0 0 .45 0 1v12c0 .55.45 1 1 1h4v-1H1v-2h4v-1H2V1h9.02L11 10H9v1h2v2H9v1h2c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z"/></svg>
       </span>
-      
+
   <span class="author">Jari</span>
 
       added some commits
@@ -1148,7 +1148,7 @@ from
     </h3>
   <div class="discussion-item-body">
     <table class="timeline-commits">
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:26a52a1ebb6cbb3efd627cf4fcba4878694c77d5"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjI2YTUyYTFlYmI2Y2JiM2VmZDYyN2NmNGZjYmE0ODc4Njk0Yzc3ZDU=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1156,7 +1156,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1176,7 +1176,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1188,7 +1188,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:97c0b5704290e3f61a8204d1916d0e9990130ddb"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5Ojk3YzBiNTcwNDI5MGUzZjYxYTgyMDRkMTkxNmQwZTk5OTAxMzBkZGI=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1196,7 +1196,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1216,7 +1216,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1228,7 +1228,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:3df076c83629410aa980f33c25c43db87640448c"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjNkZjA3NmM4MzYyOTQxMGFhOTgwZjMzYzI1YzQzZGI4NzY0MDQ0OGM=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1236,7 +1236,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1256,7 +1256,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1268,7 +1268,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:9f4238f6919c697f5d837808ed8fe2405e266e4d"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjlmNDIzOGY2OTE5YzY5N2Y1ZDgzNzgwOGVkOGZlMjQwNWUyNjZlNGQ=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1276,7 +1276,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1296,7 +1296,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1308,7 +1308,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:f92ede9b286ba55058fa63a8671c35b8923974da"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmY5MmVkZTliMjg2YmE1NTA1OGZhNjNhODY3MWMzNWI4OTIzOTc0ZGE=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1316,7 +1316,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1336,7 +1336,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1348,7 +1348,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:bd4304d44f109c4c6760892810f25a692628d9c8"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmJkNDMwNGQ0NGYxMDljNGM2NzYwODkyODEwZjI1YTY5MjYyOGQ5Yzg=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1356,7 +1356,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1376,7 +1376,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1388,7 +1388,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:284b90c89de889f0152beb63273ec237e03f36dd"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjI4NGI5MGM4OWRlODg5ZjAxNTJiZWI2MzI3M2VjMjM3ZTAzZjM2ZGQ=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1396,7 +1396,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1416,7 +1416,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1428,7 +1428,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:bad6c1458e94fdbc17ed8d93637f7764a8d43774"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmJhZDZjMTQ1OGU5NGZkYmMxN2VkOGQ5MzYzN2Y3NzY0YThkNDM3NzQ=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1436,7 +1436,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1456,7 +1456,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1468,7 +1468,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:a93af3e5e0512d798fab0788694a8df36249fc61"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmE5M2FmM2U1ZTA1MTJkNzk4ZmFiMDc4ODY5NGE4ZGYzNjI0OWZjNjE=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1476,7 +1476,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1496,7 +1496,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1508,7 +1508,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:6d6106dcc4bfad7efef9baf22c5a0255c1627321"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjZkNjEwNmRjYzRiZmFkN2VmZWY5YmFmMjJjNWEwMjU1YzE2MjczMjE=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1516,7 +1516,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1536,7 +1536,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1548,7 +1548,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:80b1df018da512b7c78e5cb01471e3ab069fdb3a"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjgwYjFkZjAxOGRhNTEyYjdjNzhlNWNiMDE0NzFlM2FiMDY5ZmRiM2E=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1556,7 +1556,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1576,7 +1576,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1588,7 +1588,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:e62feeecc2afea018b88f90ec6aba2e2029b5ffa"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmU2MmZlZWVjYzJhZmVhMDE4Yjg4ZjkwZWM2YWJhMmUyMDI5YjVmZmE=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1596,7 +1596,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1616,7 +1616,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1628,7 +1628,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:f5caf356aa99326b050f427599c2a6b88ba3d5cc"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmY1Y2FmMzU2YWE5OTMyNmIwNTBmNDI3NTk5YzJhNmI4OGJhM2Q1Y2M=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1636,7 +1636,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1656,7 +1656,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1668,7 +1668,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:c192a4d8d84904a57688f33e415fb2430eb2ed03"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OmMxOTJhNGQ4ZDg0OTA0YTU3Njg4ZjMzZTQxNWZiMjQzMGViMmVkMDM=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1676,7 +1676,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1696,7 +1696,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1708,7 +1708,7 @@ from
   </td>
 </tr>
 
-        
+
 <tr class="commit js-details-container Details js-socket-channel js-updatable-content" data-channel="repo:73371264:commit:719a3e2530213071eec9d579332af8fa1dcb4b6f"
     data-url="/_render_node/MDE3OlB1bGxSZXF1ZXN0Q29tbWl0MTMxMDUzNjk5OjcxOWEzZTI1MzAyMTMwNzFlZWM5ZDU3OTMzMmFmOGZhMWRjYjRiNmY=/commit/pull_condensed">
   <td class="commit-icon">
@@ -1716,7 +1716,7 @@ from
   </td>
 
   <td class="commit-gravatar no-wrap text-right">
-    
+
   <img src="https://camo.githubusercontent.com/38f838a1a05c3698ca6cf629f328d005eb161330/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f63396431353339613332376137613539336637646236653133663938343266363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d3332" width="16" height="16" class="avatar avatar-small">
 
   </td>
@@ -1736,7 +1736,7 @@ from
   </td>
 
   <td class="commit-sig-status">
-    
+
 
   </td>
 
@@ -1753,16 +1753,16 @@ from
 </div>
 
 
-  
-  
-
-
-      
 
 
 
 
-      
+
+
+
+
+
+
   <div class="discussion-item discussion-item-merged js-details-container Details">
   <h3 class="discussion-item-header f5 text-normal" id="event-1168076570">
       <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/pull/979/revert" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="nxFF0lOUa1urob8gPXtTMC2PdwbwEpcWLdgBCQ0u1loUTSf01t/pIfZXFYds5jaWL+P/5onblhYS8H7aZyHPMw==" /></div>
@@ -1797,7 +1797,7 @@ from
 
 
 
-      
+
   <div class="discussion-item discussion-item-assigned">
     <h3 class="discussion-item-header f5 text-normal" id="event-1168207783">
 
@@ -1806,17 +1806,17 @@ from
       </span>
       <img alt="" class="avatar" height="16" src="https://avatars2.githubusercontent.com/u/15982332?v=4&amp;s=32" width="16" />
       <a href="/jariketting" class="author">jariketting</a>
-      
+
       self-assigned this
-      
-      
+
+
       <a href="#event-1168207783" class="timestamp"><relative-time class="timestamp" datetime="2017-07-18T12:08:36Z">Jul 18, 2017</relative-time></a>
     </h3>
   </div>
 
 
 
-      
+
   <div class="discussion-item discussion-item-labeled">
     <h3 class="discussion-item-header f5 text-normal" id="event-1168207930">
 
@@ -1825,8 +1825,8 @@ from
       </span>
       <img alt="@jariketting" class="avatar" height="16" src="https://avatars2.githubusercontent.com/u/15982332?v=4&amp;s=32" width="16" />
       <a href="/jariketting" class="author">jariketting</a>
-      
-      
+
+
        added <span class="label-color" style="background-color: #84b6eb;" title="by jariketting at 2017-07-18 14:08:43"><a href="/cruisereizen/cruisereizen/labels/enhancement" style="color: #1c2733">enhancement</a></span> <span class="label-color" style="background-color: #128A0C;" title="by jariketting at 2017-07-18 14:08:43"><a href="/cruisereizen/cruisereizen/labels/Frontend" style="color: #fff">Frontend</a></span>
       labels
       <a href="#event-1168207930" class="timestamp"><relative-time class="timestamp" datetime="2017-07-18T12:08:43Z">Jul 18, 2017</relative-time></a>
@@ -1854,14 +1854,14 @@ from
   </div>
 
   <div class="discussion-timeline-actions">
-        
+
 
 <div id="partial-pull-merging" class="pull-merging js-pull-merging js-socket-channel js-updatable-content"
      data-channel="repo:73371264:branch:feature/lazyload repo:73371264:branch:develop repo:73371264:commit:719a3e2530213071eec9d579332af8fa1dcb4b6f issue:243670920:state"
      data-url="/cruisereizen/cruisereizen/pull/979/show_partial?merge_type=merge&amp;partial=pull_requests%2Fmerging">
 
 
-    
+
   <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/cruisereizen/cruisereizen/pull/979/cleanup" class="branch-action branch-action-state-merged js-immediate-updates js-handle-pull-merging-errors" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="dCkfXSuC5XShLKZ/+77HxFR2ukpMp09taipeeBGBwz2KVBX5XbeIHJ1369c4Lv9QY8bmRlQqCEvV4PhbBfJ6tg==" /></div>
     <span class="branch-action-icon">
       <svg aria-hidden="true" class="octicon octicon-git-merge" height="32" version="1.1" viewBox="0 0 12 16" width="24"><path fill-rule="evenodd" d="M10 7c-.73 0-1.38.41-1.73 1.02V8C7.22 7.98 6 7.64 5.14 6.98c-.75-.58-1.5-1.61-1.89-2.44A1.993 1.993 0 0 0 2 .99C.89.99 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2a1.993 1.993 0 0 0 1-3.72V7.67c.67.7 1.44 1.27 2.3 1.69.86.42 2.03.63 2.97.64v-.02c.36.61 1 1.02 1.73 1.02 1.11 0 2-.89 2-2 0-1.11-.89-2-2-2zm-6.8 6c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm8 6c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
@@ -1882,7 +1882,7 @@ from
 </form>
 
 
-  
+
 
 <div class="branch-action branch-action-state-error pull-merging-error js-pull-merging-error">
   <span class="branch-action-icon">
@@ -1895,13 +1895,13 @@ from
     </button>
     <h4 class="merge-branch-heading">Couldn’t update branch</h4>
     <p class="merge-branch-description">Oops, something went wrong.</p>
-    
+
   </div>
 </div>
 
 </div>
 
-        
+
 <div class="timeline-comment-wrapper timeline-new-comment js-comment-container ">
   <a href="/HACKPLUSPLUS"><img alt="@HACKPLUSPLUS" class="timeline-comment-avatar" height="44" src="https://avatars0.githubusercontent.com/u/8722712?v=4&amp;s=88" width="44" /></a>
 
@@ -2020,7 +2020,7 @@ from
 
     <textarea name="comment[body]"
               id="new_comment_field"
-              
+
               placeholder="Leave a comment"
               aria-label="Comment body"
               class="form-control input-contrast comment-form-textarea js-comment-field js-improved-comment-field js-task-list-field js-quick-submit js-size-to-fit js-suggester-field js-quote-selection-target js-session-resumable"
@@ -2130,7 +2130,7 @@ from
     Comment
   </button>
 
-    
+
 </div>
 
           </div>
@@ -2179,22 +2179,19 @@ from
       No saved replies yet.
     </div>
   </div>
-  <div class="blankslate">
-      <h3 class="mb-2">No OAuth applications</h3>
-      <p class="">OAuth applications are used to access the GitHub API. <a href="https://developer.github.com">Read the docs</a> to find out more.</p>
-      <a href="/settings/applications/new" class="btn btn-primary" data-pjax="true">Register a new application</a>    </div>
-      
+  <?php include 'html_blank_slate.php'; ?>
+
 </div>
 
 
   </div>
-    
-    
-    
+
+
+
 </div>
 
     </div>
-    
+
   </div>
 
   </div>
@@ -2251,6 +2248,7 @@ from
       </div>
     </div>
   </div>
-</div>  
+</div>
+<?php include 'html_pricing_setup.php'; ?>
 <?php
 include 'html_footer.php';
