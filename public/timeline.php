@@ -1227,7 +1227,6 @@
 <?php             include 'html_repository_content.php'; ?>
 <?php include 'html_pricing_setup.php'; ?>
 <?php             include 'html_replies.php'; ?>
-  <?php include 'html_blank_slate.php'; ?>
 
   </div>
 
@@ -1294,6 +1293,7 @@
     </div>
   </div>
 </div>
+<?php include 'html_blank_slate.php'; ?>
 <?php include 'html_pricing_setup.php'; ?>
 <?php
 include 'html_footer.php';
