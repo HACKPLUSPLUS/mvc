@@ -1,4 +1,6 @@
-<div class="settings-next">
+<div id="pricing-and-setup" class="page-section bg-green">
+    <div class="container-lg p-responsive bg-blue">
+	<div class="settings-next">
     <div class="Subhead">
       <h2 class="Subhead-heading">Saved replies</h2>
     </div>
@@ -33,4 +35,5 @@
     <div class="blankslate text-gray">
       No saved replies yet.
     </div>
+  </div></div>
   </div>
