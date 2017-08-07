@@ -616,8 +616,18 @@ EOF;
     public function getCategoriesFromRequestMessage($sailingId, $planCode)
     {
         $availability = $this->cruiseCategoryAvailabilityRequest($sailingId, $planCode);
+        
+        $categories = [];
+        
+        if (isset($availability['AvailableCategories']['AvailableCategory']['CategoryCode'])) {
+            array_push($categories, $availability['AvailableCategories']['AvailableCategory']['CategoryCode']);
+        } else {
+            foreach ($availability['AvailableCategories']['AvailableCategory'] as $category) {
+                array_push($categories, $category['CategoryCode']);
+            }
+        }
 
-        return $availability['AvailableCategories']['AvailableCategory'][0]['CategoryCode'];
+        return $categories;
     }
 
     public function parseCabinAvailabilityRequest($xml)
