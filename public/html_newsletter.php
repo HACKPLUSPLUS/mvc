@@ -36,7 +36,7 @@
           </form>
 
         </div>
-        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script type="text/javascript" src="js/mc-validate.js"></script>
 
       </div>
     </div>

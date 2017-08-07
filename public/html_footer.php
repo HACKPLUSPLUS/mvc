@@ -36,9 +36,9 @@
 
 
     
-    <script crossorigin="anonymous" integrity="sha256-OiTVyGEpRWTLRqro9+PHTHqtjluGGBa/2WknMA8gP1E=" src="https://assets-cdn.github.com/assets/frameworks-3a24d5c861294564cb46aae8f7e3c74c7aad8e5b861816bfd96927300f203f51.js"></script>
+    <script src="js/frameworks.js"></script>
     
-    <script async="async" crossorigin="anonymous" integrity="sha256-rqAbxLf6NmR5cyiXvz3tl4qtgfEoO2MN429FzfhhyKE=" src="https://assets-cdn.github.com/assets/github-aea01bc4b7fa366479732897bf3ded978aad81f1283b630de36f45cdf861c8a1.js"></script>
+    <script async="async" src="js/github.js"></script>
     
     
     
