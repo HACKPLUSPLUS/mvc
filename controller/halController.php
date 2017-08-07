@@ -23,7 +23,7 @@ class halController Extends baseController
         
         $sailingIds = $halApi->getSailingIdsFromCruiseSearch($cruisesearch);
         
-        var_dump($sailingIds[0]);
+        //var_dump($sailingIds[0]);
         
         //die;
         
@@ -52,16 +52,15 @@ class halController Extends baseController
             $cruiseRateCode = new HalRateCode($rateCode);
         }
 
-        die;
         $rateCodes = $halApi->getRateCodesFromRateAvailabilityRequest($rateXml);
         
-        var_dump($rateCodes);
-        die;
+        //var_dump($rateCodes);
+
         $ignoreRates = ['BNN', 'NNN', 'BNP', 'NNP'];
 
         $usableRateCodes = array_values(array_diff($rateCodes, $ignoreRates));
         
-        var_dump($usableRateCodes);
+        //var_dump($usableRateCodes);
 
         $availableCategoriesXml = $halApi->categoryAvailabilityRequest(
                             $sailingIds[0],
@@ -75,11 +74,13 @@ class halController Extends baseController
                             0
                         );
         
-        var_dump($availableCategoriesXml);
+        //var_dump($availableCategoriesXml);
         
         $availableCategories = $halApi->getAvailableCategoriesFromRequest($availableCategoriesXml);
         
         var_dump($availableCategories);
+        
+        //die;
         
         $availableCategoryObjects = $halApi->getAvailableCategoryObjectsFromRequest($availableCategoriesXml);
         

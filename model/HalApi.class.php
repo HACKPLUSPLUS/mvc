@@ -324,8 +324,8 @@ EOF;
         $rateCodes = [];
         if (isset($xml->RateAvailabilityResponse->RateCodeInformation)) {
             foreach ($xml->RateAvailabilityResponse->RateCodeInformation as $rateCode) {
-                //array_push($rateCodes, trim($rateCode->Rate['Code']));
-                $rateCodes[trim($rateCode->Rate['Code'])] = $rateCode->Rate['Name'];
+                array_push($rateCodes, trim($rateCode->Rate['Code']));
+                //$rateCodes[trim($rateCode->Rate['Code'])] = $rateCode->Rate['Name'];
             }
         }
 

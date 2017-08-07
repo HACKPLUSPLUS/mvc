@@ -14,44 +14,53 @@ class mscController Extends baseController
         //$departureDate = '2017-12-15';
         //$arrivalDate = '2017-12-22';
         
-        //$sailingId = $mscApi->getSailingIdFromCruiseSearch(2, 0, $shipCode, $departureDate, $arrivalDate);
+        $shipCode = 'AR';
+        $departureDate = '2017-11-28';
+        $arrivalDate = '2017-12-02';
         
-        //echo '<pre>';
-        //var_dump($sailingId);
+        $sailingId = $mscApi->getSailingIdFromCruiseSearch(2, 0, $shipCode, $departureDate, $arrivalDate);
         
         //var_dump($mscApi->getHandShake());
 
-        //$planCode = $mscApi->getPlanCodeFromRequestMessage($sailingId);
+        $planCodes = $mscApi->getPlanCodeFromRequestMessage($sailingId);
+        var_dump($planCodes);
         
-        //var_dump($planCode);
+        foreach ($planCodes as $planCode) {
+            $categoryCode = $mscApi->getCategoriesFromRequestMessage($sailingId, $planCode['planCode']);
+            //var_dump($categoryCode);
+        }
             
         //$categoryCode = $mscApi->getCategoriesFromRequestMessage($sailingId, $planCode);
         
-        //var_dump($categoryCode);
+        var_dump($categoryCode);
         
-        //$cabinNoRequest = $mscApi->cabinAvailabilityRequest($sailingId, $categoryCode);
+        $cabinNoRequest = $mscApi->cabinAvailabilityRequest($sailingId, $categoryCode);
         //$cabinNo = $cabinNoRequest["AvailableCabins"]["AvailableCabin"]["CabinNo"];
+        $cabinNo = $mscApi->parseCabinAvailabilityRequest($cabinNoRequest);
+        var_dump($cabinNo[0]);
         
-        //$categoryCode2 = $mscApi->categoryItemRequestMessage($sailingId, $categoryCode, $planCode); 
+        $categoryCode2 = $mscApi->categoryItemRequestMessage($sailingId, $categoryCode, $planCodes[0]['planCode']);
         
-        //$obs = $mscApi->parseCategoryItemRequestMessage($categoryCode2);
-        //var_dump($obs);
-        //$priceToBook = $mscApi->priceToBookRequestMessage($sailingId, $categoryCode);
-        //var_dump($priceToBook);
+        //var_dump($categoryCode2);
+        
+        $obs = $mscApi->parseCategoryItemRequestMessage($categoryCode2);
+        var_dump($obs);
+        $priceToBook = $mscApi->priceToBookRequestMessage($sailingId, $categoryCode);
+        var_dump($priceToBook["BookingPrice"]);
          
-        //$participants = [
-            //[1, 'Text', 'Mister', 'Test', 'A', 'M'],
-            //[2, 'Text', 'Madam', 'Test', 'A', 'F']
-        //];
+        $participants = [
+            [1, 'Text', 'Mister', 'Test', 'A', 'M'],
+            [2, 'Text', 'Madam', 'Test', 'A', 'F']
+        ];
         
-        //$bookingXml = $mscApi->bookRequestMessage($participants, 'Q', $sailingId, $categoryCode, $cabinNo, $obs);
-        //die(var_dump($bookingXml));
+        $bookingXml = $mscApi->bookRequestMessage($participants, 'Q', $sailingId, $categoryCode, $cabinNo[0], $obs);
+        die(var_dump($bookingXml));
         
-        $booking = $mscApi->retrieveBookingRequestMessage('26973223');
+        //$booking = $mscApi->retrieveBookingRequestMessage('26973223');
         
-        echo '<pre>';
+        //echo '<pre>';
         
-        $bkng = new MscBooking($booking);
+        //$bkng = new MscBooking($booking);
         
         //$confirmation = $mscApi->confirmQuoteRequestMessage('26973223');
         

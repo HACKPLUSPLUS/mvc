@@ -588,8 +588,29 @@ EOF;
     public function getPlanCodeFromRequestMessage($sailingId)
     {
         $planListRequestXml = $this->planListRequestMessage($sailingId);
+        
+        $planCodes = [];
+        
+        if (isset($planListRequestXml['PlanCodes']['PlanCode'])) {
+            $planCode['planCode'] = $planListRequestXml['PlanCodes']['PlanCode'];
+            $planCode['planDescription'] = $planListRequestXml['PlanCodes']['PlanDescription'];
+            $planCode['componentID'] = $planListRequestXml['PlanCodes']['ComponentID'];
+            $planCode['planType'] = $planListRequestXml['PlanCodes']['PlanType'];
+            
+            array_push($planCodes, $planCode);
+        } elseif (array($planListRequestXml['PlanCodes'])) {
+            foreach($planListRequestXml['PlanCodes'] as $planCode) 
+            {
+                $planCode['planCode'] = $planCode['PlanCode'];
+                $planCode['planDescription'] = $planCode['PlanDescription'];
+                $planCode['componentID'] = $planCode['ComponentID'];
+                $planCode['planType'] = $planCode['PlanType'];
+                
+                array_push($planCodes, $planCode);
+            }
+        }
 
-        return $planListRequestXml['PlanCodes'][1]['PlanCode'];
+        return $planCodes;
     }
 
     public function getCategoriesFromRequestMessage($sailingId, $planCode)
@@ -601,16 +622,17 @@ EOF;
 
     public function parseCabinAvailabilityRequest($xml)
     {
-        if (is_array($xml["AvailableCabins"]["AvailableCabin"])) {
+        //die(var_dump($xml["AvailableCabins"]));
+        //if (is_array($xml["AvailableCabins"]["AvailableCabin"])) {
             $roomNumbers = [];
-            foreach ($xml["AvailableCabins"]["AvailableCabin"] as $cabin) {
+            foreach ($xml["AvailableCabins"] as $cabin) {
                 array_push($roomNumbers, $cabin["CabinNo"]);
             }
 
             return $roomNumbers;
-        }
+        //}
 
-        return [$xml["AvailableCabins"]["AvailableCabin"]["CabinNo"]];
+        //return [$xml["AvailableCabins"]["AvailableCabin"]["CabinNo"]];
     }
 
     public function parseCodeDescriptionsRequestMessage($xml)
