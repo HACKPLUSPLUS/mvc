@@ -51,7 +51,7 @@ class mscController Extends baseController
         
         echo '<pre>';
         
-        var_dump($booking);
+        $bkng = new MscBooking($booking);
         
         //$confirmation = $mscApi->confirmQuoteRequestMessage('26973223');
         
