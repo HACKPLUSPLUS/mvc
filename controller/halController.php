@@ -21,11 +21,11 @@ class halController Extends baseController
             }
         }
         
-        die;
-        
         $sailingIds = $halApi->getSailingIdsFromCruiseSearch($cruisesearch);
         
-        //var_dump($sailingIds[0]);
+        var_dump($sailingIds[0]);
+        
+        //die;
         
         $cabinType = 'Binnenhut';
         
@@ -48,12 +48,15 @@ class halController Extends baseController
         $rate_direct_full_pay[] = "FJL";
         $rate_direct_full_pay[] = "FJK";
         
-        var_dump($rateXml);
-        
+        foreach ($rateXml->RateAvailabilityResponse->RateCodeInformation as $rateCode) {
+            $cruiseRateCode = new HalRateCode($rateCode);
+        }
+
+        die;
         $rateCodes = $halApi->getRateCodesFromRateAvailabilityRequest($rateXml);
         
         var_dump($rateCodes);
-        
+        die;
         $ignoreRates = ['BNN', 'NNN', 'BNP', 'NNP'];
 
         $usableRateCodes = array_values(array_diff($rateCodes, $ignoreRates));
