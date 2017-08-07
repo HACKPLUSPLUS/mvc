@@ -12,6 +12,9 @@ class HalCruise
     public $debarkPortCode;
     public $itineraryCode;
     public $itineraryPortCount;
+    public $itineraryDescription;
+    public $destinationCode;
+    public $destinationName;
 
     function __construct($cruise)
     {
@@ -25,6 +28,11 @@ class HalCruise
         $this->debarkPortCode = $cruise->DebarkPort['Code'];
         $this->itineraryCode = $cruise->Itinerary['Code'];
         $this->itineraryPortCount = $cruise->Itinerary['PortCnt'];
-        var_dump($cruise->Itinerary['PortCnt']);
+        $this->itineraryDescription = $cruise->Itinerary['Description'];
+        $this->destinationCode = $cruise->Destination['Code'];
+        $this->destinationName = $cruise->Destination['Name'];
+        foreach ($cruise->DiningSeating as $diningSeating) {
+            $seating = new DiningSeating($diningSeating);
+        }
     }	
 }
