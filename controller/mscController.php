@@ -74,22 +74,22 @@ class mscController Extends baseController
     
     public function show()
     {
-	$db = new PDO("mysql:host=localhost;dbname=models", 'root', '');
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db = new PDO("mysql:host=localhost;dbname=models", 'root', '');
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $cruiseId = $_GET['cruiseId'];
 	
-	$sql = $db->query("SELECT * FROM cruises INNER JOIN brokers ON cruises.broker_id = brokers.id WHERE cruises.id = '161051'");
-	$cruises = $sql->fetchAll(PDO::FETCH_OBJ);
+        $sql = $db->prepare("SELECT * FROM cruises INNER JOIN brokers ON cruises.broker_id = brokers.id WHERE cruises.id = :cruiseId");
+        $sql->bindParam(':cruiseId', $cruiseId, PDO::PARAM_INT);
+        $sql->execute();
+        $cruise = $sql->fetchObject('stdClass');
         
-        foreach ($cruises as $cruise) {
-            echo 'Broker : ' . $cruise->name . '<br />';
-            echo 'From : ' . $cruise->begindatum . ' To : ' . '<br />';
-            echo 'Duration : ' . $cruise->duur . '<br />';
-        }
-        
-        //echo '<pre>';
-        //var_dump($cruises);
-        
-        $sql = $db->query("SELECT `prices`.`prijs` AS prijs,
+        echo 'Broker : ' . $cruise->name . '<br />';
+        echo 'From : ' . $cruise->begindatum . ' To : ' . '<br />';
+        echo 'Duration : ' . $cruise->duration . '<br />';
+        echo 'Broker ID : ' . $cruise->broker_id . '<br />';
+        echo 'Ship ID : ' . $cruise->ship_id . '<br />';
+                
+        $sql = $db->prepare("SELECT `prices`.`prijs` AS prijs,
    `prices`.`singleprijs` AS singleprijs,
    `prices`.`kindprijs` AS kindprijs,
    `prices`.`babyprijs` AS babyprijs,
@@ -107,14 +107,17 @@ class mscController Extends baseController
    `cabin_codes`.`min_bezetting` AS bezetting
    FROM `prices`
    INNER JOIN `cabin_codes` ON `cabin_codes`.`id`=`prices`.`hut_id`
-   WHERE `prices`.`cruise_id`='161051'
-   AND `cabin_codes`.`schip_id`='192'
+   WHERE `prices`.`cruise_id`=:cruiseId
+   AND `cabin_codes`.`schip_id`=:shipId
    AND `groep`!=''
    AND (`prices`.`prijs`!=0.00 OR `prices`.`prijs_manual`!=0.00)
    AND `cabin_codes`.`naam`!='(BAK)'
    AND `cabin_codes`.`min_bezetting`>=2
    GROUP BY `cabin_codes`.`groep`
    ORDER BY `prices`.`prijs` ASC");
+        $sql->bindParam(':cruiseId', $cruiseId, PDO::PARAM_INT);
+        $sql->bindParam(':shipId', $cruise->ship_id, PDO::PARAM_INT);
+        $sql->execute();
         $prices = $sql->fetchAll(PDO::FETCH_OBJ);
         
         echo '<pre>';
@@ -125,19 +128,27 @@ class mscController Extends baseController
             echo 'Prijs : ' . $price->prijs . '<br />';
         }
     
-        $sql = $db->query("SELECT id, begindatum FROM cruises WHERE `cruises`.`broker_id`='2'
-AND `cruises`.`ship_id`='192'
-AND `cruises`.`haven_id`='13'
-AND `cruises`.`bestemming_id`='9'
-AND `cruises`.`duur`='7'
-AND `cruises`.`vaarroute`='13,9,157,461,125,105,2,13'
-AND `cruises`.`begindatum`>NOW()
-AND `cruises`.`published`='Y'
-ORDER BY `begindatum` ASC");
+        $sql = $db->prepare("SELECT id, begindatum FROM cruises
+            WHERE `cruises`.`broker_id`=:brokerId
+            AND `cruises`.`ship_id`=:shipId
+            AND `cruises`.`port_id`=:portId
+            AND `cruises`.`bestemming_id`=:destinationId
+            AND `cruises`.`duration`=:duration
+            AND `cruises`.`vaarroute`=:navigationalRoute
+            AND `cruises`.`begindatum`>NOW()
+            AND `cruises`.`published`='Y'
+            ORDER BY `begindatum` ASC");
+        $sql->bindParam(':shipId', $cruise->ship_id, PDO::PARAM_INT);
+        $sql->bindParam(':brokerId', $cruise->broker_id, PDO::PARAM_INT);
+        $sql->bindParam(':portId', $cruise->port_id, PDO::PARAM_INT);
+        $sql->bindParam(':destinationId', $cruise->bestemming_id, PDO::PARAM_INT);
+        $sql->bindParam(':duration', $cruise->duration, PDO::PARAM_INT);
+        $sql->bindParam(':navigationalRoute', $cruise->vaarroute, PDO::PARAM_INT);
+        $sql->execute();
 
         $dates = $sql->fetchAll(PDO::FETCH_OBJ);
-        die(var_dump($dates));
-    echo '<pre>';
+
+        echo '<pre>';
         foreach($dates as $key => $date) {
             echo $key;
             var_dump($date);
