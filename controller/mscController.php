@@ -77,10 +77,53 @@ class mscController Extends baseController
 	$db = new PDO("mysql:host=localhost;dbname=models", 'root', '');
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
-	$sql = $db->query("SELECT * FROM cruises ORDER BY id ASC");
-	$cruises = $sql->fetchAll(PDO::FETCH_ASSOC);
+	$sql = $db->query("SELECT * FROM cruises INNER JOIN brokers ON cruises.broker_id = brokers.id");
+	$cruises = $sql->fetchAll(PDO::FETCH_OBJ);
+        
+        foreach ($cruises as $cruise) {
+            echo 'Broker : ' . $cruise->name . '<br />';
+            echo 'From : ' . $cruise->begindatum . ' To : ' . '<br />';
+            echo 'Duration : ' . $cruise->duur . '<br />';
+        }
+        
+        //echo '<pre>';
+        //var_dump($cruises);
+        
+        $sql = $db->query("SELECT `prices`.`prijs` AS prijs,
+   `prices`.`singleprijs` AS singleprijs,
+   `prices`.`kindprijs` AS kindprijs,
+   `prices`.`babyprijs` AS babyprijs,
+   `prices`.`derdeprijs` AS derdeprijs,
+   `prices`.`cruise_id` AS cruise_id,
+   `prices`.`brochure` AS brochure,
+   `prices`.`brochure_auto` AS brochure_auto,
+   `prices`.`prijs_manual` AS prijs_manual,
+   `prices`.`rate` AS rate,
+   `cabin_codes`.`id` AS categorie_id,
+   `cabin_codes`.`code` AS categorie_code,
+   `cabin_codes`.`naam` AS categorie_naam,
+   `cabin_codes`.`groep` AS categorie_groep,
+   `cabin_codes`.`img_url` AS img_url,
+   `cabin_codes`.`min_bezetting` AS bezetting
+   FROM `prices`
+   INNER JOIN `cabin_codes` ON `cabin_codes`.`id`=`prices`.`hut_id`
+   WHERE `prices`.`cruise_id`='161051'
+   AND `cabin_codes`.`schip_id`='192'
+   AND `groep`!=''
+   AND (`prices`.`prijs`!=0.00 OR `prices`.`prijs_manual`!=0.00)
+   AND `cabin_codes`.`naam`!='(BAK)'
+   AND `cabin_codes`.`min_bezetting`>=2
+   GROUP BY `cabin_codes`.`groep`
+   ORDER BY `prices`.`prijs` ASC");
+        $prices = $sql->fetchAll(PDO::FETCH_OBJ);
         
         echo '<pre>';
-        var_dump($cruises);
+        foreach ($prices as $price) {
+            echo 'Huttype : ' . $price->categorie_groep . '<br />';
+            echo 'Hut naam : ' . $price->categorie_naam . '<br />';
+            echo 'Categorie code : ' . $price->categorie_code . '<br />';
+            echo 'Prijs : ' . $price->prijs . '<br />';
+            var_dump($price);
+        }
     }
 }
