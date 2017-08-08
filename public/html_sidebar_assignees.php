@@ -35,9 +35,8 @@
 </div>
 
 <div class="select-menu-list">
-    <button class="btn-block select-menu-clear-item select-menu-item js-navigation-item"
-         type="button" aria-label="Clear assignee" data-clear-assignees>
-      <svg aria-hidden="true" class="octicon octicon-x select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    <button class="btn-block select-menu-clear-item select-menu-item js-navigation-item" type="button" aria-label="Clear assignee" data-clear-assignees="">
+      <svg aria-hidden="true" class="octicon octicon-x select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
       <div class="select-menu-item-text">Clear assignees</div>
     </button>
 
@@ -45,17 +44,14 @@
 
   <input type="hidden" value="" name="issue[user_assignee_ids][]">
 
-  <div data-filterable-for="assignee-filter-field" data-filterable-type="substring-memory" data-filterable-limit="100" role="menu">
-      <input type="hidden" name="issue[user_assignee_ids][]" value="15982332">
+  <div data-filterable-for="assignee-filter-field" data-filterable-type="substring-memory" data-filterable-limit="100" role="menu" class="filterable-active">
+      
 
     <template>
       <div class="select-menu-item js-navigation-item" role="menuitem">
-        <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+        <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
 
-        <input style="display:none"
-               type="checkbox"
-               value=""
-               name="issue[user_assignee_ids][]">
+        <input style="display:none" type="checkbox" value="" name="issue[user_assignee_ids][]">
 
         <div class="select-menu-item-gravatar">
           <img src="" alt="" size="20" class="avatar avatar-small mr-1 js-avatar">
@@ -69,7 +65,67 @@
         </div>
       </div>
     </template>
-  </div>
+  <div class="select-menu-item js-navigation-item" role="menuitem">
+        <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+
+        <input style="display:none" type="checkbox" value="8722712" name="issue[user_assignee_ids][]">
+
+        <div class="select-menu-item-gravatar">
+          <img src="https://avatars0.githubusercontent.com/u/8722712?v=4&amp;s=60" alt="" size="20" class="avatar avatar-small mr-1 js-avatar">
+        </div>
+
+        <div class="select-menu-item-text lh-condensed">
+          <span class="select-menu-item-heading">
+            <span class="js-username">HACKPLUSPLUS</span>
+            <span class="description js-description">Jesse Wilson</span>
+          </span>
+        </div>
+      </div><div class="select-menu-item js-navigation-item selected" role="menuitem">
+        <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+
+        <input style="display:none" type="checkbox" value="9730849" name="issue[user_assignee_ids][]">
+
+        <div class="select-menu-item-gravatar">
+          <img src="https://avatars0.githubusercontent.com/u/9730849?v=4&amp;s=60" alt="" size="20" class="avatar avatar-small mr-1 js-avatar">
+        </div>
+
+        <div class="select-menu-item-text lh-condensed">
+          <span class="select-menu-item-heading">
+            <span class="js-username">jonnyhoeven</span>
+            <span class="description js-description">Jonny van der Hoeven</span>
+          </span>
+        </div>
+      </div><div class="select-menu-item js-navigation-item" role="menuitem">
+        <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+
+        <input style="display:none" type="checkbox" value="9527464" name="issue[user_assignee_ids][]">
+
+        <div class="select-menu-item-gravatar">
+          <img src="https://avatars3.githubusercontent.com/u/9527464?v=4&amp;s=60" alt="" size="20" class="avatar avatar-small mr-1 js-avatar">
+        </div>
+
+        <div class="select-menu-item-text lh-condensed">
+          <span class="select-menu-item-heading">
+            <span class="js-username">sebassch</span>
+            <span class="description js-description"></span>
+          </span>
+        </div>
+      </div><div class="select-menu-item js-navigation-item last-visible navigation-focus" role="menuitem">
+        <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+
+        <input style="display:none" type="checkbox" value="29088026" name="issue[user_assignee_ids][]">
+
+        <div class="select-menu-item-gravatar">
+          <img src="https://avatars0.githubusercontent.com/u/29088026?v=4&amp;s=60" alt="" size="20" class="avatar avatar-small mr-1 js-avatar">
+        </div>
+
+        <div class="select-menu-item-text lh-condensed">
+          <span class="select-menu-item-heading">
+            <span class="js-username">wesleyTurnhout</span>
+            <span class="description js-description"></span>
+          </span>
+        </div>
+      </div></div>
 </div>
 
 
