@@ -1,3 +1,10 @@
+<?php
+	$db = new PDO("mysql:host=localhost;dbname=models", 'root', '');
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	$sql = $db->query("SELECT * FROM brokers ORDER BY id ASC");
+	$brokers = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
 <ul class="pagehead-actions">
   <li>
         <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="8rCvpUG+D83gKBUpJOQFyor0rNnwCFQHiCifYfzG0oVeJ55bHToXS2YPWsG7nPPSE+/QFUjyPOQnsCgpTdHmYQ==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="73371264" />
@@ -68,6 +75,20 @@
                     </span>
                   </div>
                 </div>
+                  <?php foreach($brokers as $broker) { ?>
+                  <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading"><?php echo $broker['name']; ?></span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                        Stop ignoring
+                    </span>
+                  </div>
+                </div>
+                  <?php } ?>
 
               </div>
 
