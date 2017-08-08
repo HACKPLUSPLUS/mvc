@@ -77,7 +77,7 @@ class mscController Extends baseController
 	$db = new PDO("mysql:host=localhost;dbname=models", 'root', '');
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
-	$sql = $db->query("SELECT * FROM cruises INNER JOIN brokers ON cruises.broker_id = brokers.id");
+	$sql = $db->query("SELECT * FROM cruises INNER JOIN brokers ON cruises.broker_id = brokers.id WHERE cruises.id = '161051'");
 	$cruises = $sql->fetchAll(PDO::FETCH_OBJ);
         
         foreach ($cruises as $cruise) {
@@ -123,7 +123,24 @@ class mscController Extends baseController
             echo 'Hut naam : ' . $price->categorie_naam . '<br />';
             echo 'Categorie code : ' . $price->categorie_code . '<br />';
             echo 'Prijs : ' . $price->prijs . '<br />';
-            var_dump($price);
+        }
+    
+        $sql = $db->query("SELECT id, begindatum FROM cruises WHERE `cruises`.`broker_id`='2'
+AND `cruises`.`ship_id`='192'
+AND `cruises`.`haven_id`='13'
+AND `cruises`.`bestemming_id`='9'
+AND `cruises`.`duur`='7'
+AND `cruises`.`vaarroute`='13,9,157,461,125,105,2,13'
+AND `cruises`.`begindatum`>NOW()
+AND `cruises`.`published`='Y'
+ORDER BY `begindatum` ASC");
+
+        $dates = $sql->fetchAll(PDO::FETCH_OBJ);
+        die(var_dump($dates));
+    echo '<pre>';
+        foreach($dates as $key => $date) {
+            echo $key;
+            var_dump($date);
         }
     }
 }
