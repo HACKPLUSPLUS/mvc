@@ -71,4 +71,16 @@ class mscController Extends baseController
         //var_dump($confirmation);
         
     }
+    
+    public function show()
+    {
+	$db = new PDO("mysql:host=localhost;dbname=models", 'root', '');
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	$sql = $db->query("SELECT * FROM cruises ORDER BY id ASC");
+	$cruises = $sql->fetchAll(PDO::FETCH_ASSOC);
+        
+        echo '<pre>';
+        var_dump($cruises);
+    }
 }
