@@ -25,7 +25,6 @@ class mscController Extends baseController
         //$planCodes = $mscApi->getPlanCodeFromRequestMessage($sailingId);
         //var_dump($planCodes);
         
-        
         //foreach ($planCodes as $planCode) {
             //$categoryCode = $mscApi->getCategoriesFromRequestMessage($sailingId, $planCode['planCode']);
             //var_dump($categoryCode);
